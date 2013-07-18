@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bash | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/blog/categories/bash/atom.xml" rel="self"/>
+  <link href="http://YunlongNie.github.io/"/>
+  <updated>2013-07-18T11:35:43-07:00</updated>
+  <id>http://YunlongNie.github.io/</id>
+  <author>
+    <name><![CDATA[joha]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Login without password]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/17/login-without-password/"/>
+    <updated>2013-07-17T02:12:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/17/login-without-password</id>
+    <content type="html"><![CDATA[<p>say you wanna log into a linux server to do some job. But every time it requires you enter the password, which at least I feel annoying. Here is a way you can generate a key and login without password.</p>
+
+<p>Suppose we call the local machine A and server as B. Of course, you should have a account for B, say joha@B and password: thissiapassword.</p>
+
+<h1>How?</h1>
+
+<ol>
+<li><p>first suppose you are on A already and you need to generate a pair of authentication keys. Do not enter any passphrase.
+<code>ssh-keygen -t rsa</code></p></li>
+<li><p>Defaultly, it will creat a key in ~/.ssh/.</p></li>
+<li><p>use ssh to creat a folder ~/.ssh as use joha on B. if the folder already exits, it&rsquo;s ok.
+<code>ssh joha@B mkdir -p .ssh</code>
+enter the password for B.</p></li>
+<li><p>append A&rsquo;s new public key to joha@B:.ssh/authorized_keys and enter the password for b again.
+<code>cat .ssh/id_rsa.pub | ssh joha@B 'cat &gt;&gt; .ssh/authorized keys</code></p></li>
+<li><p>then you can login B without password
+<code>ssh joha@B</code></p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
