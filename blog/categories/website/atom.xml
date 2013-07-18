@@ -4,7 +4,7 @@
   <title><![CDATA[Category: website | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/blog/categories/website/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-18T12:19:52-07:00</updated>
+  <updated>2013-07-18T14:20:55-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Theme]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/18/theme/"/>
+    <updated>2013-07-18T14:14:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/18/theme</id>
+    <content type="html"><![CDATA[<h2>Bootstrap Theme</h2>
+
+<p>The theme of this website is <a href="://github.com/bkutil/bootstrap-theme">bootstrap</a>.
+The code for installation is</p>
+
+<pre><code>    $ git clone git://github.com/bkutil/bootstrap-theme.git source/.themes/bootstrap
+    $ rake install['bootstrap']
+    $ rake generate
+</code></pre>
+
+<p>There are other themes on this <a href="http://opthemes.com/">website</a>. Some of them are very cool actually. Check it out!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SideBar]]></title>
