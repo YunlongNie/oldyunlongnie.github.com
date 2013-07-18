@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-18T11:35:43-07:00</updated>
+  <updated>2013-07-18T12:01:24-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -30,7 +30,7 @@
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x79;&#x75;&#x6e;&#108;&#x6f;&#110;&#x67;&#110;&#105;&#x65;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#109;&#x2e;">&#x79;&#117;&#110;&#x6c;&#x6f;&#x6e;&#103;&#110;&#105;&#x65;&#x40;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;&#x2e;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x79;&#117;&#x6e;&#x6c;&#x6f;&#110;&#103;&#110;&#x69;&#101;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;&#46;">&#x79;&#117;&#x6e;&#108;&#x6f;&#110;&#x67;&#x6e;&#x69;&#101;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
