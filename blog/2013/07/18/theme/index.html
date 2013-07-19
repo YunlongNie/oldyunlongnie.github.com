@@ -197,6 +197,28 @@ The code for installation is</p>
   <h1>About Me</h1>
   <p>Graduate Student in UBC, yunlong nie at stat ubc ca</p>
 </section>
+
+<section class="well">
+  <ul id="gh_repos" class="nav">
+    <li class="nav-header">GitHub Repos</li>
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/YunlongNie">@YunlongNie</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        github.showRepos({
+            user: 'YunlongNie',
+            count: 1,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/asides/github.js" type="text/javascript"> </script>
+</section>
+
 <section class="well">
   <ul id="recent_posts" class="nav nav-list">
     <li class="nav-header">Recent Posts</li>
@@ -231,31 +253,6 @@ The code for installation is</p>
 
   </ul>
 </section>
-
-<section class="well">
-  <ul id="gh_repos" class="nav">
-    <li class="nav-header">GitHub Repos</li>
-    <li class="loading">Status updating...</li>
-  </ul>
-  
-  <a href="https://github.com/YunlongNie">@YunlongNie</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        github.showRepos({
-            user: 'YunlongNie',
-            count: 1,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/asides/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
 <section>
   <h1>Categories</h1>
   <ul id="categories">
@@ -265,6 +262,9 @@ The code for installation is</p>
 
   </ul>
 </section>
+
+
+
 
   
 </aside>
