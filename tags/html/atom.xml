@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: html | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/tags/html/atom.xml" rel="self"/>
+  <link href="http://YunlongNie.github.io/"/>
+  <updated>2013-07-19T02:37:00-07:00</updated>
+  <id>http://YunlongNie.github.io/</id>
+  <author>
+    <name><![CDATA[joha]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Redirect personal website to here]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here/"/>
+    <updated>2013-07-19T02:30:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here</id>
+    <content type="html"><![CDATA[<h3>my old personal website is <code>stat.ubc.ca/~yunlong.nie</code> and when visitors come to this web page, I&rsquo;d like to guide them to this new blog automatically.</h3>
+
+<p>Here we need to make use <code>.haccess</code> file.</p>
+
+<pre><code>      $ cd public_html/
+      $ vi .haccess
+      # put the following code into this file
+      Redirect 301 /~yunlong.nie/ http://yunlongnie.github.io/
+</code></pre>
+
+<p>Bingo! This <a href="http://www.uvm.edu/webguide/?Page=redirects.html&amp;SM=urlsubmenu.html">website</a> has more details.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Find by file extension and do sth - YL's Blog</title>
+  <title>Redirect personal website to here - YL's Blog</title>
   <meta name="author" content="joha">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth">
+  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
   
   <header class="page-header">
     
-      <h1 class="entry-title">Find by File Extension and Do Sth</h1>
+      <h1 class="entry-title">Redirect Personal Website to Here</h1>
     
     
       <p class="meta">
@@ -111,22 +111,24 @@
   
 
 
-<time datetime="2013-07-19T00:03:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+<time datetime="2013-07-19T02:30:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h3>say we wanna find all the file with the same extension within one folder and do sth else</h3>
+<div class="entry-content"><h3>my old personal website is <code>stat.ubc.ca/~yunlong.nie</code> and when visitors come to this web page, I&rsquo;d like to guide them to this new blog automatically.</h3>
 
-<pre><code>     cd ~/Downloads;
-     find . -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
-     # first locate all the files with .mp3 then mv to a new folder
+<p>Here we need to make use <code>.haccess</code> file.</p>
 
-     find . -iname "*.mp3" -exec rm {}  \;
-     # first locate all the files with .mp3 then delete them all
+<pre><code>      $ cd public_html/
+      $ vi .haccess
+      # put the following code into this file
+      Redirect 301 /~yunlong.nie/ http://yunlongnie.github.io/
 </code></pre>
+
+<p>Bingo! This <a href="http://www.uvm.edu/webguide/?Page=redirects.html&amp;SM=urlsubmenu.html">website</a> has more details.</p>
 </div>
 
 
@@ -149,12 +151,12 @@
   
 
 
-<time datetime="2013-07-19T00:03:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+<time datetime="2013-07-19T02:30:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>linux</a>
+    <a class='category' href='/blog/categories/website/'>website</a>
   
 </span>
 
@@ -163,7 +165,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here/" >Tweet</a>
   
   
   
@@ -176,14 +178,10 @@
     <ul class="pager">
       
       <li class="previous"><a class="basic-alignment left"
-        href="/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/" title="Previous Post:
-        Make an existing folder into a new github repo">&laquo; Make an existing folder into a new github repo</a></li>
+        href="/blog/2013/07/19/find-by-file-extension-and-do-sth/" title="Previous Post:
+        Find by file extension and do sth">&laquo; Find by file extension and do sth</a></li>
       
       <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2013/07/19/redirect-personal-website-to-here/"
-        title="Next Post: Redirect personal website to here">Redirect personal website to here
-        &raquo;</a></li>
       
     </ul>
   </footer>

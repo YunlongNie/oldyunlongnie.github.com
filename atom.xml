@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-19T00:06:50-07:00</updated>
+  <updated>2013-07-19T02:37:00-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Redirect personal website to here]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here/"/>
+    <updated>2013-07-19T02:30:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here</id>
+    <content type="html"><![CDATA[<h3>my old personal website is <code>stat.ubc.ca/~yunlong.nie</code> and when visitors come to this web page, I&rsquo;d like to guide them to this new blog automatically.</h3>
+
+<p>Here we need to make use <code>.haccess</code> file.</p>
+
+<pre><code>      $ cd public_html/
+      $ vi .haccess
+      # put the following code into this file
+      Redirect 301 /~yunlong.nie/ http://yunlongnie.github.io/
+</code></pre>
+
+<p>Bingo! This <a href="http://www.uvm.edu/webguide/?Page=redirects.html&amp;SM=urlsubmenu.html">website</a> has more details.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Find by file extension and do sth]]></title>
@@ -211,7 +230,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#121;&#x75;&#x6e;&#x6c;&#111;&#110;&#103;&#110;&#x69;&#x65;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#x6d;&#x2e;">&#x79;&#117;&#110;&#108;&#x6f;&#110;&#x67;&#110;&#105;&#x65;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#121;&#x75;&#x6e;&#108;&#x6f;&#x6e;&#x67;&#110;&#105;&#x65;&#x40;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#46;&#x63;&#x6f;&#x6d;&#46;">&#121;&#117;&#x6e;&#x6c;&#111;&#x6e;&#x67;&#x6e;&#x69;&#101;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
