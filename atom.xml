@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-18T22:58:13-07:00</updated>
+  <updated>2013-07-18T22:59:34-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -20,9 +20,9 @@
     <id>http://YunlongNie.github.io/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo</id>
     <content type="html"><![CDATA[<p>I am quite new to Github and it took me 2 days to get into it. Just keep a record for future reference. ### Say if you have a foler on your machine and you&rsquo;d like to creat a new repo on github server.</p>
 
-<p>*### suppose your local folder is <code>~/myfold/</code>. The first thing we do is to creat a repo on github server we call it <code>myfold</code>.</p>
+<h3>* suppose your local folder is <code>~/myfold/</code>. The first thing we do is to creat a repo on github server we call it <code>myfold</code>.</h3>
 
-<p>*### next we add this folder to the server.</p>
+<h3>* next we add this folder to the server.</h3>
 
 <pre><code>    $ git init
     # initialise a git
@@ -194,7 +194,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x79;&#x75;&#110;&#108;&#111;&#x6e;&#103;&#110;&#x69;&#x65;&#x40;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;&#46;">&#x79;&#117;&#110;&#x6c;&#x6f;&#110;&#x67;&#x6e;&#x69;&#x65;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;&#x2e;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x79;&#x75;&#110;&#x6c;&#x6f;&#110;&#x67;&#110;&#x69;&#101;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;&#x2e;">&#121;&#117;&#110;&#108;&#x6f;&#110;&#x67;&#110;&#105;&#101;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;&#x2e;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
