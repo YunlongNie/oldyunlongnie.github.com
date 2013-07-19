@@ -135,8 +135,14 @@
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
 <span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>print.figure &lt;- function(writeto,filename,placement="H",caption,label)
 </span><span class='line'>{
+</span><span class='line'>  ## writeto is the location like ~/mytex.tex
+</span><span class='line'>  ## filename is the pic location usually a pdf 
+</span><span class='line'>  ##  placement can be H or h
 </span><span class='line'>  sink(writeto)
 </span><span class='line'>  cat("\\begin{figure}[",placement,"]\n",sep="")
 </span><span class='line'>  cat("\\begin{center}\n",sep="")
@@ -150,7 +156,7 @@
 </span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
 
-
+<p><code>sink</code> and <code>cat</code> can be a powerful combination. They can make latex files in R adn do a lot of things.</p>
 </div>
 
 
