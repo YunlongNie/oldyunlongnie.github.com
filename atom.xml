@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-19T04:01:25-07:00</updated>
+  <updated>2013-07-19T12:05:36-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Run Bash Code and documentation manage]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/run-bash-code-and-documentation-manage/"/>
+    <updated>2013-07-19T12:00:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/run-bash-code-and-documentation-manage</id>
+    <content type="html"><![CDATA[<p>I tried to manage my chrome download folder. Say, put all the mp3 files into one folder and all the pdf to another folder. We can simply write a   <strong>bash</strong> code script and make use of the <code>source</code> command.</p>
+
+<p>My script is like this:</p>
+
+<pre><code>      find ~/Downloads -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+      find ~/Downloads -iname "*.torrent" -exec rm {} \;
+      find ~/Downloads -iname "*.pdf" -exec mv {} ~/Downloads/PDFs/ \;
+</code></pre>
+
+<p>save the above script in a txt file named <code>johadload.txt</code> and you can simply run</p>
+
+<pre><code>     source johadload.txt
+</code></pre>
+
+<p>bingo!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Redirect personal website to here]]></title>
@@ -230,7 +253,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#121;&#x75;&#110;&#108;&#111;&#x6e;&#x67;&#110;&#105;&#101;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#111;&#x6d;&#x2e;">&#121;&#x75;&#110;&#108;&#x6f;&#x6e;&#103;&#110;&#x69;&#x65;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#x6f;&#x6d;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x79;&#x75;&#110;&#x6c;&#111;&#110;&#x67;&#110;&#105;&#101;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;&#x2e;">&#x79;&#x75;&#x6e;&#108;&#x6f;&#110;&#103;&#x6e;&#105;&#x65;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>

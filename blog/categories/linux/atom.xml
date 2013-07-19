@@ -4,7 +4,7 @@
   <title><![CDATA[Category: linux | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-19T04:01:25-07:00</updated>
+  <updated>2013-07-19T12:05:36-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Run Bash Code and documentation manage]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/run-bash-code-and-documentation-manage/"/>
+    <updated>2013-07-19T12:00:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/run-bash-code-and-documentation-manage</id>
+    <content type="html"><![CDATA[<p>I tried to manage my chrome download folder. Say, put all the mp3 files into one folder and all the pdf to another folder. We can simply write a   <strong>bash</strong> code script and make use of the <code>source</code> command.</p>
+
+<p>My script is like this:</p>
+
+<pre><code>      find ~/Downloads -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+      find ~/Downloads -iname "*.torrent" -exec rm {} \;
+      find ~/Downloads -iname "*.pdf" -exec mv {} ~/Downloads/PDFs/ \;
+</code></pre>
+
+<p>save the above script in a txt file named <code>johadload.txt</code> and you can simply run</p>
+
+<pre><code>     source johadload.txt
+</code></pre>
+
+<p>bingo!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Find by file extension and do sth]]></title>

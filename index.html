@@ -97,6 +97,56 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/19/run-bash-code-and-documentation-manage/">Run Bash Code and Documentation Manage</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-19T12:00:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I tried to manage my chrome download folder. Say, put all the mp3 files into one folder and all the pdf to another folder. We can simply write a   <strong>bash</strong> code script and make use of the <code>source</code> command.</p>
+
+<p>My script is like this:</p>
+
+<pre><code>      find ~/Downloads -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+      find ~/Downloads -iname "*.torrent" -exec rm {} \;
+      find ~/Downloads -iname "*.pdf" -exec mv {} ~/Downloads/PDFs/ \;
+</code></pre>
+
+<p>save the above script in a txt file named <code>johadload.txt</code> and you can simply run</p>
+
+<pre><code>     source johadload.txt
+</code></pre>
+
+<p>bingo!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/19/redirect-personal-website-to-here/">Redirect Personal Website to Here</a></h1>
     
     
@@ -276,52 +326,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/18/theme/">Theme</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-18T14:14:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Bootstrap Theme</h2>
-
-<p>The theme of this website is <a href="://github.com/bkutil/bootstrap-theme">bootstrap</a>.
-The code for installation is</p>
-
-<pre><code>    $ git clone git://github.com/bkutil/bootstrap-theme.git source/.themes/bootstrap
-    $ rake install['bootstrap']
-    $ rake generate
-</code></pre>
-
-<p>There are other themes on this <a href="http://opthemes.com/">website</a>. Some of them are very cool actually. Check it out!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/2/">&larr; Older</a></li>
@@ -367,6 +371,10 @@ The code for installation is</p>
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/19/run-bash-code-and-documentation-manage/">Run Bash Code and documentation manage</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/19/redirect-personal-website-to-here/">Redirect personal website to here</a>
       </li>
     
@@ -380,10 +388,6 @@ The code for installation is</p>
     
       <li class="post">
         <a href="/blog/2013/07/18/tag-cloud/">Tag Cloud</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/18/theme/">Theme</a>
       </li>
     
   </ul>
@@ -408,7 +412,7 @@ The code for installation is</p>
 <section>
   <h1>Tags</h1>
   <ul class="tag-cloud">
-    <a style="font-size: 166%" href="/tags/bash/">bash</a>
+    <a style="font-size: 210%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 90%" href="/tags/html/">html</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
@@ -419,7 +423,7 @@ The code for installation is</p>
   <h1>Categories</h1>
   <ul id="categories">
     <li class='category'><a href='/blog/categories/github/'>Github (1)</a></li>
-<li class='category'><a href='/blog/categories/linux/'>linux (2)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/website/'>website (5)</a></li>
 
   </ul>
