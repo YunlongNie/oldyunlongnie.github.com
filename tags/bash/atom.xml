@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: bash | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/tags/bash/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-18T22:59:34-07:00</updated>
+  <updated>2013-07-19T00:06:50-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Find by file extension and do sth]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth/"/>
+    <updated>2013-07-19T00:03:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth</id>
+    <content type="html"><![CDATA[<h3>say we wanna find all the file with the same extension within one folder and do sth else</h3>
+
+<pre><code>     cd ~/Downloads;
+     find . -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+     # first locate all the files with .mp3 then mv to a new folder
+
+     find . -iname "*.mp3" -exec rm {}  \;
+     # first locate all the files with .mp3 then delete them all
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Login without password]]></title>

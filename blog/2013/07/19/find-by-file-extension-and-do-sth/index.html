@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Make an existing folder into a new github repo - YL's Blog</title>
+  <title>Find by file extension and do sth - YL's Blog</title>
   <meta name="author" content="joha">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo">
+  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
   
   <header class="page-header">
     
-      <h1 class="entry-title">Make an Existing Folder Into a New Github Repo</h1>
+      <h1 class="entry-title">Find by File Extension and Do Sth</h1>
     
     
       <p class="meta">
@@ -111,36 +111,22 @@
   
 
 
-<time datetime="2013-07-18T22:43:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+<time datetime="2013-07-19T00:03:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I am quite new to Github and it took me 2 days to get into it. Just keep a record for future reference. ### Say if you have a foler on your machine and you&rsquo;d like to creat a new repo on github server.</p>
+<div class="entry-content"><h3>say we wanna find all the file with the same extension within one folder and do sth else</h3>
 
-<h3>* suppose your local folder is <code>~/myfold/</code>. The first thing we do is to creat a repo on github server we call it <code>myfold</code>.</h3>
+<pre><code>     cd ~/Downloads;
+     find . -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+     # first locate all the files with .mp3 then mv to a new folder
 
-<h3>* next we add this folder to the server.</h3>
-
-<pre><code>    $ git init
-    # initialise a git
-    $ git add .
-    $ git commit -m "your comment"
-    # commit the files
-    $ git remote add origin https://github.com/YunlongNie/myfolder.git
-    # point origin to the myfolder.git repo
-    $ git push -u origin master
+     find . -iname "*.mp3" -exec rm {}  \;
+     # first locate all the files with .mp3 then delete them all
 </code></pre>
-
-<p>*### note that some time you may like to <strong>remove</strong> or <strong>rename</strong> the origin</p>
-
-<pre><code>    $git remote rename &lt;old&gt; &lt;new&gt;
-    $git remote remove &lt;name&gt;
-</code></pre>
-
-<p>Check out this website about <a href="http://git-scm.com/docs/git-remote">git-remote</a>.</p>
 </div>
 
 
@@ -163,12 +149,12 @@
   
 
 
-<time datetime="2013-07-18T22:43:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+<time datetime="2013-07-19T00:03:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/github/'>Github</a>
+    <a class='category' href='/blog/categories/linux/'>linux</a>
   
 </span>
 
@@ -177,7 +163,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth/" >Tweet</a>
   
   
   
@@ -190,14 +176,10 @@
     <ul class="pager">
       
       <li class="previous"><a class="basic-alignment left"
-        href="/blog/2013/07/18/tag-cloud/" title="Previous Post:
-        Tag Cloud">&laquo; Tag Cloud</a></li>
+        href="/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/" title="Previous Post:
+        Make an existing folder into a new github repo">&laquo; Make an existing folder into a new github repo</a></li>
       
       <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2013/07/19/find-by-file-extension-and-do-sth/"
-        title="Next Post: Find by file extension and do sth">Find by file extension and do sth
-        &raquo;</a></li>
       
     </ul>
   </footer>

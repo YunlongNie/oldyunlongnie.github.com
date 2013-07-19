@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-18T22:59:34-07:00</updated>
+  <updated>2013-07-19T00:06:50-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Find by file extension and do sth]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth/"/>
+    <updated>2013-07-19T00:03:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth</id>
+    <content type="html"><![CDATA[<h3>say we wanna find all the file with the same extension within one folder and do sth else</h3>
+
+<pre><code>     cd ~/Downloads;
+     find . -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+     # first locate all the files with .mp3 then mv to a new folder
+
+     find . -iname "*.mp3" -exec rm {}  \;
+     # first locate all the files with .mp3 then delete them all
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Make an existing folder into a new github repo]]></title>
@@ -194,7 +211,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x79;&#x75;&#110;&#x6c;&#x6f;&#110;&#x67;&#110;&#x69;&#101;&#x40;&#103;&#105;&#116;&#104;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;&#x2e;">&#121;&#117;&#110;&#108;&#x6f;&#110;&#x67;&#110;&#105;&#101;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;&#x2e;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#121;&#x75;&#x6e;&#x6c;&#111;&#110;&#103;&#110;&#x69;&#x65;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#99;&#x6f;&#x6d;&#x2e;">&#x79;&#117;&#110;&#108;&#x6f;&#110;&#x67;&#110;&#105;&#x65;&#64;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
