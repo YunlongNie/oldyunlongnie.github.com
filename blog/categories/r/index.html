@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>YL's Blog</title>
+  <title>Category: r - YL's Blog</title>
   <meta name="author" content="joha">
 
   
-  <meta name="description" content="">
+  <meta name="description" content="Category: r">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://YunlongNie.github.io/blog/page/2">
+  <link rel="canonical" href="http://YunlongNie.github.ioblog/categories/r">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -89,287 +89,41 @@
 </nav>
   <div class="container">
     <div class="row-fluid">
-      <div class="span9">
-  
-  
-  
-    <article>
       
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/18/tag-cloud/">Tag Cloud</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+<article role="article" class="span9">
 
   
-
-
-<time datetime="2013-07-18T19:07:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
-        
-      </p>
+  <header class="page-header">
+    <h1 class="entry-title">Category: R</h1>
     
   </header>
-
-
-  <div class="entry-content"><p>see the <a href="http://codemacro.com/2012/07/18/add-tag-to-octopress/">tutorial</a> here</p>
-</div>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/18/theme/">Theme</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
+  <div id="blog-archives" class="category">
 
 
 
   
+  <h1>2013</h1>
 
+<article>
+  <div class="well">
 
-<time datetime="2013-07-18T14:14:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
+<h2><a href="/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/">R: my own function to generate text code for figure</a></h2>
+<time datetime="2013-07-19T14:53:00-07:00" pubdate><span class='month'>Jul</span> <span class='day'>19</span> <span class='year'>2013</span></time>
 
-
-  <div class="entry-content"><h2>Bootstrap Theme</h2>
-
-<p>The theme of this website is <a href="://github.com/bkutil/bootstrap-theme">bootstrap</a>.
-The code for installation is</p>
-
-<pre><code>    $ git clone git://github.com/bkutil/bootstrap-theme.git source/.themes/bootstrap
-    $ rake install['bootstrap']
-    $ rake generate
-</code></pre>
-
-<p>There are other themes on this <a href="http://opthemes.com/">website</a>. Some of them are very cool actually. Check it out!</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/18/sidebar/">SideBar</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-18T12:14:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>where to edit</h2>
-
-<p>*There is a <code>about.html</code> in directory <code>source/_include/custom/asides/about.html</code>. First give this file some content.</p>
-
-<p>*Then edit <code>_config.yml</code>, there is a defaul asides setting: add cutom/asides/about.html inside</p>
-
-<pre><code>    default_asides: [custom/asides/about.html,asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/18/how-to-add-a-page-on-the-navigation-bar/">How to Add a Page on the Navigation Bar</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-18T00:21:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Big picture</h2>
-
-<p>The aim is to add links to the main navigation bar, the source page needs to be edited &lsquo;/source/_includes/custom/navigation.html&rsquo; which looks like:</p>
-
-<pre><code>    &lt;ul class="main-navigation"&gt;
-    &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-</code></pre>
-
-<p>for example you want to add a &lsquo;About me&rsquo; pages just add another line there like:</p>
-
-<pre><code>    &lt;li&gt;&lt;a href="/about"&gt;Archives&lt;/a&gt;&lt;/li&gt;
-</code></pre>
-
-<p>but you do need to add a &lsquo;about&rsquo; page in your root directory, that is, under the folder &lsquo;source/&rsquo;, the details can be found in this <a href="http://octopress.org/docs/blogging">page</a>.</p>
-
-<pre><code>    rake new_page[about]
-    # it will creat source/about/index.markdown
-    rake new_page[about.markdowm]
-    # it will creat source/about.markdown
-</code></pre>
-
-<p>Notice the difference between these two.</p>
-
-<h2>Step by Step</h2>
-
-<p>here we will show how to add a page say TA in the navigation bar step by step.</p>
-
-<ol>
-<li><p>first creat a page called &lsquo;TA&rsquo; under source</p>
-
-<pre><code> rake new_page[TA]
- # this will creat source/TA/index.markdown
-</code></pre></li>
-<li><p>edit the index.markdown as you want</p></li>
-<li><p>creat a item in the &lsquo;/source/_includes/custom/navigation.html&rsquo; and make it like this:</p>
-
-<pre><code> &lt;ul class="main-navigation"&gt;
- &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="/TA"&gt;TA&lt;/a&gt;&lt;/li&gt;
- &lt;/ul&gt;
-</code></pre></li>
-<li><p>then generate all the site and push to your github account.</p>
-
-<pre><code> rake generate
- rake preview
- rake deploy
-</code></pre></li>
-</ol>
-
-
-<h2>Done!</h2>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/17/login-without-password/">Login Without Password</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T02:12:00-07:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>say you wanna log into a linux server to do some job. But every time it requires you enter the password, which at least I feel annoying. Here is a way you can generate a key and login without password.</p>
-
-<p>Suppose we call the local machine A and server as B. Of course, you should have a account for B, say joha@B and password: thissiapassword.</p>
-
-<h1>How?</h1>
-
-<ol>
-<li><p>first suppose you are on A already and you need to generate a pair of authentication keys. Do not enter any passphrase.
-<code>ssh-keygen -t rsa</code></p></li>
-<li><p>Defaultly, it will creat a key in ~/.ssh/.</p></li>
-<li><p>use ssh to creat a folder ~/.ssh as use joha on B. if the folder already exits, it&rsquo;s ok.
-<code>ssh joha@B mkdir -p .ssh</code>
-enter the password for B.</p></li>
-<li><p>append A&rsquo;s new public key to joha@B:.ssh/authorized_keys and enter the password for b again.
-<code>cat .ssh/id_rsa.pub | ssh joha@B 'cat &gt;&gt; .ssh/authorized keys</code></p></li>
-<li><p>then you can login B without password
-<code>ssh joha@B</code></p></li>
-</ol>
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/latex/'>latex</a>, <a class='category' href='/blog/categories/r/'>r</a></span>
+</footer>
 
 </div>
-  
-  
 
+</article>
 
-    </article>
-  
-  <ul class="pager">
-    
-    <li class="previous"><a href="/blog/page/3/">&larr; Older</a></li>
-    
-    <li><a href="/blog/archives">Blog Archives</a></li>
-    
-    <li class="next"><a href="/">Newer &rarr;</a></li>
-    
-  </ul>
 </div>
+
+  
+</article>
+
 <aside class="sidebar-nav span3">
   
     <section>
@@ -384,7 +138,7 @@ enter the password for B.</p></li>
 <section class="well">
   <ul id="gh_repos" class="nav">
     <li class="nav-header">GitHub Repos</li>
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/YunlongNie">@YunlongNie</a> on GitHub
@@ -473,6 +227,7 @@ enter the password for B.</p></li>
 
   
 </aside>
+
 
     </div>
   </div>

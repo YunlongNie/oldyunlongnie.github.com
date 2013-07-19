@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-19T12:05:36-07:00</updated>
+  <updated>2013-07-19T14:58:56-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,47 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[R: my own function to generate text code for figure]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/"/>
+    <updated>2013-07-19T14:53:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure</id>
+    <content type="html"><![CDATA[<p>This topic belongs to the reproducable research topic. <strong>Sweave</strong> is actually a good way of combining R and Latex. However sometime we just need to generate a <code>.tex</code> file so that we can input into main <code>.tex</code> file.</p>
+
+<p>Here is my way:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>print.figure &lt;- function(writeto,filename,placement="H",caption,label)
+</span><span class='line'>{
+</span><span class='line'>  sink(writeto)
+</span><span class='line'>  cat("\\begin{figure}[",placement,"]\n",sep="")
+</span><span class='line'>  cat("\\begin{center}\n",sep="")
+</span><span class='line'>  cat("\\includegraphics{",filename,"}\n",sep="")
+</span><span class='line'>  cat("\\end{center}\n",sep="")
+</span><span class='line'>  if(!missing(caption)) {cat("\\caption{", caption,"}\n",sep="")}
+</span><span class='line'>  if(!missing(label)) {cat("\\label{", label,"}\n",sep="")}
+</span><span class='line'>  cat("\\end{figure}\n",sep="")
+</span><span class='line'>  sink()
+</span><span class='line'>  system(paste("cat",writeto))
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Run Bash Code and documentation manage]]></title>
@@ -253,7 +294,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x79;&#x75;&#110;&#x6c;&#111;&#110;&#x67;&#110;&#105;&#101;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;&#x2e;">&#x79;&#x75;&#x6e;&#108;&#x6f;&#110;&#103;&#x6e;&#105;&#x65;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#109;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#121;&#x75;&#110;&#x6c;&#x6f;&#x6e;&#x67;&#x6e;&#105;&#101;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;&#x2e;">&#121;&#x75;&#x6e;&#108;&#x6f;&#x6e;&#103;&#x6e;&#x69;&#101;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
