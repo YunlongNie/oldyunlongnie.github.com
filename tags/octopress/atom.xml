@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: octopress | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/tags/octopress/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-18T19:03:58-07:00</updated>
+  <updated>2013-07-18T19:16:32-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tag Cloud]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/18/tag-cloud/"/>
+    <updated>2013-07-18T19:07:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/18/tag-cloud</id>
+    <content type="html"><![CDATA[<p>see the <a href="http://codemacro.com/2012/07/18/add-tag-to-octopress/">tutorial</a> here</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Theme]]></title>

@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Login without password - YL's Blog</title>
+  <title>Tag: server - YL's Blog</title>
   <meta name="author" content="joha">
 
   
-  <meta name="description" content="">
+  <meta name="description" content="Tag: server">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/17/login-without-password">
+  <link rel="canonical" href="http://YunlongNie.github.iotags/server">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -90,113 +90,38 @@
   <div class="container">
     <div class="row-fluid">
       
-<article class="hentry span9" role="article">
+<article role="article" class="span9">
 
   
   <header class="page-header">
-    
-      <h1 class="entry-title">Login Without Password</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T02:12:00-07:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
+    <h1 class="entry-title">Tag: Server</h1>
     
   </header>
+  
+  <div id="blog-archives" class="tag">
 
 
-<div class="entry-content"><p>say you wanna log into a linux server to do some job. But every time it requires you enter the password, which at least I feel annoying. Here is a way you can generate a key and login without password.</p>
 
-<p>Suppose we call the local machine A and server as B. Of course, you should have a account for B, say joha@B and password: thissiapassword.</p>
+  
+  <h2>2013</h2>
 
-<h1>How?</h1>
+<article>
+  <div class="well">
 
-<ol>
-<li><p>first suppose you are on A already and you need to generate a pair of authentication keys. Do not enter any passphrase.
-<code>ssh-keygen -t rsa</code></p></li>
-<li><p>Defaultly, it will creat a key in ~/.ssh/.</p></li>
-<li><p>use ssh to creat a folder ~/.ssh as use joha on B. if the folder already exits, it&rsquo;s ok.
-<code>ssh joha@B mkdir -p .ssh</code>
-enter the password for B.</p></li>
-<li><p>append A&rsquo;s new public key to joha@B:.ssh/authorized_keys and enter the password for b again.
-<code>cat .ssh/id_rsa.pub | ssh joha@B 'cat &gt;&gt; .ssh/authorized keys</code></p></li>
-<li><p>then you can login B without password
-<code>ssh joha@B</code></p></li>
-</ol>
+<h2><a href="/blog/2013/07/17/how-to-bulid-this-blog/">github with jeklly boostrap</a></h2>
+<time datetime="2013-07-17T01:51:00-07:00" pubdate><span class='month'>Jul</span> <span class='day'>17</span> <span class='year'>2013</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/linux/'>Linux</a></span>
+</footer>
 
 </div>
 
+</article>
 
-  <footer>
-    <p class="meta">
-      
-  
-
-<span class="byline author vcard">Posted by <span class="fn">joha</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T02:12:00-07:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/bash/'>bash</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/17/login-without-password/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/17/login-without-password/" >Tweet</a>
-  
-  
-  
-    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-  
 </div>
 
-    
-    
-    <ul class="pager">
-      
-      <li class="previous"><a class="basic-alignment left"
-        href="/blog/2013/07/17/how-to-bulid-this-blog/" title="Previous Post:
-        github with jeklly boostrap">&laquo; github with jeklly boostrap</a></li>
-      
-      <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2013/07/18/how-to-add-a-page-on-the-navigation-bar/"
-        title="Next Post: How to add a page on the navigation bar">How to add a page on the navigation bar
-        &raquo;</a></li>
-      
-    </ul>
-  </footer>
+  
 </article>
 
 <aside class="sidebar-nav span3">

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Login without password - YL's Blog</title>
+  <title>Tag Cloud - YL's Blog</title>
   <meta name="author" content="joha">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/17/login-without-password">
+  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/18/tag-cloud">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -95,7 +95,7 @@
   
   <header class="page-header">
     
-      <h1 class="entry-title">Login Without Password</h1>
+      <h1 class="entry-title">Tag Cloud</h1>
     
     
       <p class="meta">
@@ -111,32 +111,14 @@
   
 
 
-<time datetime="2013-07-17T02:12:00-07:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
+<time datetime="2013-07-18T19:07:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>say you wanna log into a linux server to do some job. But every time it requires you enter the password, which at least I feel annoying. Here is a way you can generate a key and login without password.</p>
-
-<p>Suppose we call the local machine A and server as B. Of course, you should have a account for B, say joha@B and password: thissiapassword.</p>
-
-<h1>How?</h1>
-
-<ol>
-<li><p>first suppose you are on A already and you need to generate a pair of authentication keys. Do not enter any passphrase.
-<code>ssh-keygen -t rsa</code></p></li>
-<li><p>Defaultly, it will creat a key in ~/.ssh/.</p></li>
-<li><p>use ssh to creat a folder ~/.ssh as use joha on B. if the folder already exits, it&rsquo;s ok.
-<code>ssh joha@B mkdir -p .ssh</code>
-enter the password for B.</p></li>
-<li><p>append A&rsquo;s new public key to joha@B:.ssh/authorized_keys and enter the password for b again.
-<code>cat .ssh/id_rsa.pub | ssh joha@B 'cat &gt;&gt; .ssh/authorized keys</code></p></li>
-<li><p>then you can login B without password
-<code>ssh joha@B</code></p></li>
-</ol>
-
+<div class="entry-content"><p>see the <a href="http://codemacro.com/2012/07/18/add-tag-to-octopress/">tutorial</a> here</p>
 </div>
 
 
@@ -159,21 +141,15 @@ enter the password for B.</p></li>
   
 
 
-<time datetime="2013-07-17T02:12:00-07:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
+<time datetime="2013-07-18T19:07:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/bash/'>bash</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/17/login-without-password/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/17/login-without-password/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/18/tag-cloud/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/18/tag-cloud/" >Tweet</a>
   
   
   
@@ -186,14 +162,10 @@ enter the password for B.</p></li>
     <ul class="pager">
       
       <li class="previous"><a class="basic-alignment left"
-        href="/blog/2013/07/17/how-to-bulid-this-blog/" title="Previous Post:
-        github with jeklly boostrap">&laquo; github with jeklly boostrap</a></li>
+        href="/blog/2013/07/18/theme/" title="Previous Post:
+        Theme">&laquo; Theme</a></li>
       
       <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2013/07/18/how-to-add-a-page-on-the-navigation-bar/"
-        title="Next Post: How to add a page on the navigation bar">How to add a page on the navigation bar
-        &raquo;</a></li>
       
     </ul>
   </footer>
