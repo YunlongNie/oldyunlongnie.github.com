@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: website - YL's Blog</title>
+  <title>Make an existing folder into a new github repo - YL's Blog</title>
   <meta name="author" content="joha">
 
   
-  <meta name="description" content="Category: website">
+  <meta name="description" content="">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://YunlongNie.github.ioblog/categories/website">
+  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -90,86 +90,113 @@
   <div class="container">
     <div class="row-fluid">
       
-<article role="article" class="span9">
+<article class="hentry span9" role="article">
 
   
   <header class="page-header">
-    <h1 class="entry-title">Category: Website</h1>
+    
+      <h1 class="entry-title">Make an Existing Folder Into a New Github Repo</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-18T22:43:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
+
+
+<div class="entry-content"><p>I am quite new to Github and it took me 2 days to get into it. Just keep a record for future reference. ### Say if you have a foler on your machine and you&rsquo;d like to creat a new repo on github server.</p>
+
+<p>*### suppose your local folder is <code>~/myfold/</code>. The first thing we do is to creat a repo on github server we call it <code>myfold</code>.</p>
+
+<p>*### next we add this folder to the server.</p>
+
+<pre><code>    $ git init
+    # initialise a git
+    $ git add .
+    $ git commit -m "your comment"
+    # commit the files
+    $ git remote add origin https://github.com/YunlongNie/myfolder.git
+    # point origin to the myfolder.git repo
+    $ git push -u origin master
+</code></pre>
+
+<p>*### note that some time you may like to <strong>remove</strong> or <strong>rename</strong> the origin</p>
+
+<pre><code>    $git remote rename &lt;old&gt; &lt;new&gt;
+    $git remote remove &lt;name&gt;
+</code></pre>
+
+<p>Check out this website about <a href="http://git-scm.com/docs/git-remote">git-remote</a>.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <div id="blog-archives" class="category">
+
+<span class="byline author vcard">Posted by <span class="fn">joha</span></span>
+
+      
 
 
 
-  
-  <h1>2013</h1>
-
-<article>
-  <div class="well">
-
-<h2><a href="/blog/2013/07/18/theme/">Theme</a></h2>
-<time datetime="2013-07-18T14:14:00-07:00" pubdate><span class='month'>Jul</span> <span class='day'>18</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/website/'>website</a></span>
-</footer>
-
-</div>
-
-</article>
 
 
 
-<article>
-  <div class="well">
 
-<h2><a href="/blog/2013/07/18/sidebar/">SideBar</a></h2>
-<time datetime="2013-07-18T12:14:00-07:00" pubdate><span class='month'>Jul</span> <span class='day'>18</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/website/'>website</a></span>
-</footer>
-
-</div>
-
-</article>
-
-
-
-<article>
-  <div class="well">
-
-<h2><a href="/blog/2013/07/18/how-to-add-a-page-on-the-navigation-bar/">How to add a page on the navigation bar</a></h2>
-<time datetime="2013-07-18T00:21:00-07:00" pubdate><span class='month'>Jul</span> <span class='day'>18</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/website/'>website</a></span>
-</footer>
-
-</div>
-
-</article>
-
-
-
-<article>
-  <div class="well">
-
-<h2><a href="/blog/2013/07/17/how-to-bulid-this-blog/">github with jeklly boostrap</a></h2>
-<time datetime="2013-07-17T01:51:00-07:00" pubdate><span class='month'>Jul</span> <span class='day'>17</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/website/'>website</a></span>
-</footer>
-
-</div>
-
-</article>
-
-</div>
 
   
+
+
+<time datetime="2013-07-18T22:43:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/github/'>Github</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    
+    <ul class="pager">
+      
+      <li class="previous"><a class="basic-alignment left"
+        href="/blog/2013/07/18/tag-cloud/" title="Previous Post:
+        Tag Cloud">&laquo; Tag Cloud</a></li>
+      
+      <li><a href="/blog/archives">Blog Archives</a></li>
+      
+    </ul>
+  </footer>
 </article>
 
 <aside class="sidebar-nav span3">

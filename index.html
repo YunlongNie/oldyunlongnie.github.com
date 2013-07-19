@@ -97,6 +97,64 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/">Make an Existing Folder Into a New Github Repo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-18T22:43:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am quite new to Github and it took me 2 days to get into it. Just keep a record for future reference. ### Say if you have a foler on your machine and you&rsquo;d like to creat a new repo on github server.</p>
+
+<p>*### suppose your local folder is <code>~/myfold/</code>. The first thing we do is to creat a repo on github server we call it <code>myfold</code>.</p>
+
+<p>*### next we add this folder to the server.</p>
+
+<pre><code>    $ git init
+    # initialise a git
+    $ git add .
+    $ git commit -m "your comment"
+    # commit the files
+    $ git remote add origin https://github.com/YunlongNie/myfolder.git
+    # point origin to the myfolder.git repo
+    $ git push -u origin master
+</code></pre>
+
+<p>*### note that some time you may like to <strong>remove</strong> or <strong>rename</strong> the origin</p>
+
+<pre><code>    $git remote rename &lt;old&gt; &lt;new&gt;
+    $git remote remove &lt;name&gt;
+</code></pre>
+
+<p>Check out this website about <a href="http://git-scm.com/docs/git-remote">git-remote</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/18/tag-cloud/">Tag Cloud</a></h1>
     
     
@@ -400,7 +458,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x79;&#117;&#110;&#108;&#x6f;&#110;&#103;&#x6e;&#x69;&#x65;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#x6d;&#46;">&#121;&#x75;&#110;&#108;&#111;&#110;&#x67;&#x6e;&#105;&#101;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x79;&#x75;&#110;&#108;&#111;&#x6e;&#103;&#110;&#x69;&#x65;&#x40;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;&#46;">&#x79;&#117;&#110;&#x6c;&#x6f;&#110;&#x67;&#x6e;&#x69;&#x65;&#x40;&#x67;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;&#x2e;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
@@ -523,6 +581,10 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/">Make an existing folder into a new github repo</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/18/tag-cloud/">Tag Cloud</a>
       </li>
     
@@ -538,16 +600,13 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
         <a href="/blog/2013/07/18/how-to-add-a-page-on-the-navigation-bar/">How to add a page on the navigation bar</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/07/17/login-without-password/">Login without password</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Tags</h1>
   <ul class="tag-cloud">
     <a style="font-size: 90%" href="/tags/bash/">bash</a>
+<a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
 
   </ul>
@@ -555,7 +614,8 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
 <section>
   <h1>Categories</h1>
   <ul id="categories">
-    <li class='category'><a href='/blog/categories/linux/'>linux (1)</a></li>
+    <li class='category'><a href='/blog/categories/github/'>Github (1)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>linux (1)</a></li>
 <li class='category'><a href='/blog/categories/website/'>website (4)</a></li>
 
   </ul>
