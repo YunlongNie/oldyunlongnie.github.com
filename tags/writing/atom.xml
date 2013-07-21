@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: Writing | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/tags/writing/atom.xml" rel="self"/>
+  <link href="http://YunlongNie.github.io/"/>
+  <updated>2013-07-21T15:22:03-07:00</updated>
+  <id>http://YunlongNie.github.io/</id>
+  <author>
+    <name><![CDATA[joha]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Writing: Indentificality]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/21/writing-indentificality/"/>
+    <updated>2013-07-21T15:12:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/21/writing-indentificality</id>
+    <content type="html"><![CDATA[<p>Cite:</p>
+
+<blockquote><p>Non-identifiability of parameters is well-recognized problem in classical statistics, and Bayesian statisticians have long recognized the importance of exchangeability assumptions in making statistical inferences. A seemingly unrelated problem in epidemiology is that of confounding: bias in estimation of the effects of an exposure on disease risk, due to inherent differences in risk between exposure and unexposured individuals. Using a simple deterministic model for exposure effect, a logical connection is drawn between the concepts of identifiability, exchangeability, and confounding. This connection allows one to view the problem of confounding as arising from problems of identifiability, and reveals the exchangeability assumptions that are implicit in confounder control methods. It also provides further justification for confounder definition based on comparability of exposure groups, as opposed to collapsibility-based definitions.</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-21T14:38:13-07:00</updated>
+  <updated>2013-07-21T15:22:03-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Writing: Indentificality]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/21/writing-indentificality/"/>
+    <updated>2013-07-21T15:12:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/21/writing-indentificality</id>
+    <content type="html"><![CDATA[<p>Cite:</p>
+
+<blockquote><p>Non-identifiability of parameters is well-recognized problem in classical statistics, and Bayesian statisticians have long recognized the importance of exchangeability assumptions in making statistical inferences. A seemingly unrelated problem in epidemiology is that of confounding: bias in estimation of the effects of an exposure on disease risk, due to inherent differences in risk between exposure and unexposured individuals. Using a simple deterministic model for exposure effect, a logical connection is drawn between the concepts of identifiability, exchangeability, and confounding. This connection allows one to view the problem of confounding as arising from problems of identifiability, and reveals the exchangeability assumptions that are implicit in confounder control methods. It also provides further justification for confounder definition based on comparability of exposure groups, as opposed to collapsibility-based definitions.</p></blockquote>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[R: let R run bash code in backgroud]]></title>
@@ -416,7 +427,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x79;&#117;&#110;&#x6c;&#111;&#x6e;&#x67;&#x6e;&#x69;&#x65;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#99;&#x6f;&#x6d;&#46;">&#121;&#x75;&#110;&#x6c;&#x6f;&#x6e;&#x67;&#110;&#x69;&#101;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x79;&#x75;&#110;&#x6c;&#111;&#110;&#103;&#110;&#105;&#101;&#x40;&#103;&#105;&#116;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#109;&#x2e;">&#x79;&#117;&#x6e;&#x6c;&#111;&#110;&#x67;&#x6e;&#105;&#101;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>

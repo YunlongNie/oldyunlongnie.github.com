@@ -109,6 +109,44 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/21/writing-indentificality/">Writing: Indentificality</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-21T15:12:00-07:00" pubdate data-updated="true">Jul 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Cite:</p>
+
+<blockquote><p>Non-identifiability of parameters is well-recognized problem in classical statistics, and Bayesian statisticians have long recognized the importance of exchangeability assumptions in making statistical inferences. A seemingly unrelated problem in epidemiology is that of confounding: bias in estimation of the effects of an exposure on disease risk, due to inherent differences in risk between exposure and unexposured individuals. Using a simple deterministic model for exposure effect, a logical connection is drawn between the concepts of identifiability, exchangeability, and confounding. This connection allows one to view the problem of confounding as arising from problems of identifiability, and reveals the exchangeability assumptions that are implicit in confounder control methods. It also provides further justification for confounder definition based on comparability of exposure groups, as opposed to collapsibility-based definitions.</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: Let R Run Bash Code in Backgroud</a></h1>
     
     
@@ -375,56 +413,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/19/run-bash-code-and-documentation-manage/">Run Bash Code and Documentation Manage</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-19T12:00:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I tried to manage my chrome download folder. Say, put all the mp3 files into one folder and all the pdf to another folder. We can simply write a   <strong>bash</strong> code script and make use of the <code>source</code> command.</p>
-
-<p>My script is like this:</p>
-
-<pre><code>      find ~/Downloads -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
-      find ~/Downloads -iname "*.torrent" -exec rm {} \;
-      find ~/Downloads -iname "*.pdf" -exec mv {} ~/Downloads/PDFs/ \;
-</code></pre>
-
-<p>save the above script in a txt file named <code>johadload.txt</code> and you can simply run</p>
-
-<pre><code>     source johadload.txt
-</code></pre>
-
-<p>bingo!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/2/">&larr; Older</a></li>
@@ -470,6 +458,10 @@
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/21/writing-indentificality/">Writing: Indentificality</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: let R run bash code in backgroud</a>
       </li>
     
@@ -483,10 +475,6 @@
     
       <li class="post">
         <a href="/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/">R: my own function to generate text code for figure</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/19/run-bash-code-and-documentation-manage/">Run Bash Code and documentation manage</a>
       </li>
     
   </ul>
@@ -511,7 +499,8 @@
 <section>
   <h1>Tags</h1>
   <ul class="tag-cloud">
-    <a style="font-size: 210%" href="/tags/bash/">bash</a>
+    <a style="font-size: 90%" href="/tags/writing/">Writing</a>
+<a style="font-size: 210%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 150%" href="/tags/html/">html</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
@@ -524,6 +513,7 @@
   <h1>Categories</h1>
   <ul id="categories">
     <li class='category'><a href='/blog/categories/github/'>Github (1)</a></li>
+<li class='category'><a href='/blog/categories/writing/'>Writing (1)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>latex (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (2)</a></li>
