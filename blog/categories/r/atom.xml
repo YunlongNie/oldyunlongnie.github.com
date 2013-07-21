@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: R | YL's Blog]]></title>
+  <title><![CDATA[Category: r | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/blog/categories/r/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-21T00:46:32-07:00</updated>
+  <updated>2013-07-21T00:55:33-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -69,6 +69,38 @@ system(paste(&ldquo;R CMD check&rdquo;,filenames[grep(as.character(verNo),filena
 </code></pre>
 
 <p>which I call bash to copy the data file into another directory. It&rsquo;s actually super simple but spares you open your terminal or click your mouse. The problem is sometimes after a long time when you cannot exactly recall every step, but you need to reproduce your work. Running everything on a script avoid that issue. It is especially helpful for file management.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[R: my own function to generate text code for figure]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/"/>
+    <updated>2013-07-19T14:53:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure</id>
+    <content type="html"><![CDATA[<p>This topic belongs to the reproducable research topic. <strong>Sweave</strong> is actually a good way of combining R and Latex. However sometime we just need to generate a <code>.tex</code> file so that we can input into main <code>.tex</code> file.</p>
+
+<p>Here is my way:</p>
+
+<p><code>
+print.figure &lt;- function(writeto,filename,placement="H",caption,label)
+{
+  ## writeto is the location like ~/mytex.tex
+  ## filename is the pic location usually a pdf
+  ##  placement can be H or h
+  sink(writeto)
+  cat("\\begin{figure}[",placement,"]\n",sep="")
+  cat("\\begin{center}\n",sep="")
+  cat("\\includegraphics{",filename,"}\n",sep="")
+  cat("\\end{center}\n",sep="")
+  if(!missing(caption)) {cat("\\caption{", caption,"}\n",sep="")}
+  if(!missing(label)) {cat("\\label{", label,"}\n",sep="")}
+  cat("\\end{figure}\n",sep="")
+  sink()
+  system(paste("cat",writeto))
+}
+</code></p>
+
+<p><code>sink</code> and <code>cat</code> can be a powerful combination. They can make latex files in R adn do a lot of things.</p>
 ]]></content>
   </entry>
   
