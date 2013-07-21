@@ -4,7 +4,7 @@
   <title><![CDATA[Category: website | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/blog/categories/website/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-21T00:28:15-07:00</updated>
+  <updated>2013-07-21T00:30:28-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -23,7 +23,8 @@
 <p>```
 my previous <a href="/blog/2013/07/18/sidebar/">post</a></p>
 
-<p>```</p>
+<p><code>``
+Note that the default root directory is</code>/<code>, so you need to add  before</code>/blog`</p>
 
 <p>my previous <a href="/blog/2013/07/18/sidebar/">post</a></p>
 ]]></content>
