@@ -97,6 +97,52 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/19/redirect-personal-website-to-here/">Redirect Personal Website to Here</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-19T02:30:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>my old personal website is <code>stat.ubc.ca/~yunlong.nie</code> and when visitors come to this web page, I&rsquo;d like to guide them to this new blog automatically.</h3>
+
+<p>Here we need to make use <code>.haccess</code> file.</p>
+
+<pre><code>      $ cd public_html/
+      $ vi .haccess
+      # put the following code into this file
+      Redirect 301 /~yunlong.nie/ http://yunlongnie.github.io/
+</code></pre>
+
+<p>Bingo! This <a href="http://www.uvm.edu/webguide/?Page=redirects.html&amp;SM=urlsubmenu.html">website</a> has more details.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/19/find-by-file-extension-and-do-sth/">Find by File Extension and Do Sth</a></h1>
     
     
@@ -276,49 +322,6 @@ The code for installation is</p>
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/18/sidebar/">SideBar</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-18T12:14:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>where to edit</h2>
-
-<p>*There is a <code>about.html</code> in directory <code>source/_include/custom/asides/about.html</code>. First give this file some content.</p>
-
-<p>*Then edit <code>_config.yml</code>, there is a defaul asides setting: add cutom/asides/about.html inside</p>
-
-<pre><code>    default_asides: [custom/asides/about.html,asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/3/">&larr; Older</a></li>
@@ -366,6 +369,10 @@ The code for installation is</p>
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: let R run bash code in backgroud</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/21/website-link-to-your-own-post/">Website: Link to your own post</a>
       </li>
     
@@ -379,10 +386,6 @@ The code for installation is</p>
     
       <li class="post">
         <a href="/blog/2013/07/19/run-bash-code-and-documentation-manage/">Run Bash Code and documentation manage</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/19/redirect-personal-website-to-here/">Redirect personal website to here</a>
       </li>
     
   </ul>
@@ -407,10 +410,11 @@ The code for installation is</p>
 <section>
   <h1>Tags</h1>
   <ul class="tag-cloud">
-    <a style="font-size: 185%" href="/tags/bash/">bash</a>
+    <a style="font-size: 210%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 150%" href="/tags/html/">html</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
+<a style="font-size: 90%" href="/tags/r/">r</a>
 <a style="font-size: 90%" href="/tags/r-and-latex/">r&latex</a>
 
   </ul>
@@ -419,6 +423,7 @@ The code for installation is</p>
   <h1>Categories</h1>
   <ul id="categories">
     <li class='category'><a href='/blog/categories/github/'>Github (1)</a></li>
+<li class='category'><a href='/blog/categories/r/'>R (1)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>latex (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (1)</a></li>

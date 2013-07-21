@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: bash | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/tags/bash/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-21T00:30:28-07:00</updated>
+  <updated>2013-07-21T00:46:32-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,65 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[R: let R run bash code in backgroud]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/"/>
+    <updated>2013-07-21T00:35:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud</id>
+    <content type="html"><![CDATA[<p>Recently, I am making a R package. During this process, I found lots of useful stuff which worth a record. I will talk about how to make R packges with Rcpp, in which R code and C code are combined.</p>
+
+<p>Below is my R code for making a pacakge:
+```</p>
+
+<p>require(Rcpp)</p>
+
+<p>cfiles = paste(&ldquo;Cpp/&rdquo;,list.files(&ldquo;Cpp/&rdquo;),sep=&ldquo;&rdquo;)
+Rfiles = paste(&ldquo;R/&rdquo;,list.files(&ldquo;R/&rdquo;),sep=&ldquo;&rdquo;)
+packageName=&ldquo;BayDR&rdquo;
+verNo=2.2
+system(paste(&ldquo;rm -rf&rdquo;,packageName))</p>
+
+<h1>delete the original bayDR folder</h1>
+
+<p>Rcpp.package.skeleton(name=packageName,cpp_files=cfiles,code_files=Rfiles,author=&ldquo;YL&rdquo;,</p>
+
+<pre><code>                  example_code=FALSE,email="yunlong.nie@stat.ubc.ca")
+</code></pre>
+
+<p>require(roxygen2)</p>
+
+<p>roxygenise(package.dir=&ldquo;BayDR&rdquo;,overwrite=TRUE) # wirte some in the C++ files too, like in the DatDen_X_C</p>
+
+<h1>add useDynLib(BayDR) at the end of NAMESPACE</h1>
+
+<p>system(paste(&ldquo;cp -r data &rdquo;,paste0(packageName,&ldquo;/&rdquo;)))
+sink(file=paste0(packageName,&ldquo;/NAMESPACE&rdquo;),append=TRUE)
+cat(&ldquo;useDynLib(&rdquo;,packageName,&ldquo;)&rdquo;,sep=&ldquo;&rdquo;)
+sink()
+file.copy(from=&ldquo;DESCRIPTION&rdquo;,to=paste0(packageName,&ldquo;/&rdquo;),overwrite=TRUE)
+desp= readLines(con=paste0(packageName,&ldquo;/&rdquo;,&ldquo;DESCRIPTION&rdquo;))
+desp[4] = paste(&ldquo;Version: &rdquo;, verNo)
+writeLines(desp,con=paste0(packageName,&ldquo;/&rdquo;,&ldquo;DESCRIPTION&rdquo;))</p>
+
+<h1>then copy the description file and data folder, change the verion number in the description file.</h1>
+
+<h1>command line to the the folder which bayDR locates</h1>
+
+<p>system(paste(&ldquo;R CMD build&rdquo;,packageName))
+filenames = list.files(&ldquo;~/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/&rdquo;)
+system(paste(&ldquo;R CMD check&rdquo;,filenames[grep(as.character(verNo),filenames)]))</p>
+
+<p>```</p>
+
+<p>Sorry for throwing this ugly code first here. But if you look carefully, probably you did notice that there is a <code>system()</code> function there. For example,</p>
+
+<pre><code>    system(paste("cp -r data ",paste0(packageName,"/")))
+</code></pre>
+
+<p>which I call bash to copy the data file into another directory. It&rsquo;s actually super simple but spares you open your terminal or click your mouse. The problem is sometimes after a long time when you cannot exactly recall every step, but you need to reproduce your work. Running everything on a script avoid that issue. It is especially helpful for file management.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Run Bash Code and documentation manage]]></title>

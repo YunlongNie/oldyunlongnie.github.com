@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: R | YL's Blog]]></title>
-  <link href="http://YunlongNie.github.io/blog/categories/r/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: r | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/tags/r/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
   <updated>2013-07-21T00:46:32-07:00</updated>
   <id>http://YunlongNie.github.io/</id>

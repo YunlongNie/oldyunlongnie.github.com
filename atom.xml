@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-21T00:30:28-07:00</updated>
+  <updated>2013-07-21T00:46:32-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,95 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[R: let R run bash code in backgroud]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/"/>
+    <updated>2013-07-21T00:35:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud</id>
+    <content type="html"><![CDATA[<p>Recently, I am making a R package. During this process, I found lots of useful stuff which worth a record. I will talk about how to make R packges with Rcpp, in which R code and C code are combined.</p>
+
+<p>Below is my R code for making a pacakge:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>require(Rcpp)
+</span><span class='line'>
+</span><span class='line'>cfiles = paste("Cpp/",list.files("Cpp/"),sep="")
+</span><span class='line'>Rfiles = paste("R/",list.files("R/"),sep="")
+</span><span class='line'>packageName="BayDR"
+</span><span class='line'>verNo=2.2
+</span><span class='line'>system(paste("rm -rf",packageName))
+</span><span class='line'>#  delete the original bayDR folder 
+</span><span class='line'>Rcpp.package.skeleton(name=packageName,cpp_files=cfiles,code_files=Rfiles,author="YL",
+</span><span class='line'>                      example_code=FALSE,email="yunlong.nie@stat.ubc.ca")
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>require(roxygen2)
+</span><span class='line'>
+</span><span class='line'>roxygenise(package.dir="BayDR",overwrite=TRUE) # wirte some in the C++ files too, like in the DatDen_X_C
+</span><span class='line'>
+</span><span class='line'># add useDynLib(BayDR) at the end of NAMESPACE
+</span><span class='line'>
+</span><span class='line'>system(paste("cp -r data ",paste0(packageName,"/")))
+</span><span class='line'>sink(file=paste0(packageName,"/NAMESPACE"),append=TRUE)
+</span><span class='line'>cat("useDynLib(",packageName,")",sep="")
+</span><span class='line'>sink()
+</span><span class='line'>file.copy(from="DESCRIPTION",to=paste0(packageName,"/"),overwrite=TRUE)
+</span><span class='line'>desp= readLines(con=paste0(packageName,"/","DESCRIPTION"))
+</span><span class='line'>desp[4] = paste("Version: ", verNo)
+</span><span class='line'>writeLines(desp,con=paste0(packageName,"/","DESCRIPTION"))
+</span><span class='line'># then copy the description file and data folder, change the verion number in the description file. 
+</span><span class='line'>
+</span><span class='line'># command line to the the folder which bayDR locates
+</span><span class='line'>
+</span><span class='line'>system(paste("R CMD build",packageName))
+</span><span class='line'>filenames = list.files("~/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/")
+</span><span class='line'>system(paste("R CMD check",filenames[grep(as.character(verNo),filenames)]))
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sorry for throwing this ugly code first here. But if you look carefully, probably you did notice that there is a <code>system()</code> function there. For example,</p>
+
+<pre><code>    system(paste("cp -r data ",paste0(packageName,"/")))
+</code></pre>
+
+<p>which I call bash to copy the data file into another directory. It&rsquo;s actually super simple but spares you open your terminal or click your mouse. The problem is sometimes after a long time when you cannot exactly recall every step, but you need to reproduce your work. Running everything on a script avoid that issue. It is especially helpful for file management.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Website: Link to your own post]]></title>
@@ -327,7 +416,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x79;&#117;&#110;&#108;&#111;&#110;&#x67;&#x6e;&#x69;&#101;&#64;&#103;&#105;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#x6d;&#46;">&#x79;&#117;&#110;&#x6c;&#x6f;&#x6e;&#103;&#x6e;&#x69;&#x65;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#121;&#117;&#110;&#108;&#x6f;&#110;&#103;&#110;&#x69;&#101;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#99;&#111;&#x6d;&#46;">&#x79;&#x75;&#x6e;&#108;&#x6f;&#x6e;&#x67;&#110;&#x69;&#x65;&#x40;&#x67;&#105;&#116;&#x68;&#117;&#x62;&#46;&#99;&#111;&#109;&#x2e;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>

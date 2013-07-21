@@ -97,6 +97,122 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: Let R Run Bash Code in Backgroud</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-21T00:35:00-07:00" pubdate data-updated="true">Jul 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recently, I am making a R package. During this process, I found lots of useful stuff which worth a record. I will talk about how to make R packges with Rcpp, in which R code and C code are combined.</p>
+
+<p>Below is my R code for making a pacakge:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>require(Rcpp)
+</span><span class='line'>
+</span><span class='line'>cfiles = paste("Cpp/",list.files("Cpp/"),sep="")
+</span><span class='line'>Rfiles = paste("R/",list.files("R/"),sep="")
+</span><span class='line'>packageName="BayDR"
+</span><span class='line'>verNo=2.2
+</span><span class='line'>system(paste("rm -rf",packageName))
+</span><span class='line'>#  delete the original bayDR folder 
+</span><span class='line'>Rcpp.package.skeleton(name=packageName,cpp_files=cfiles,code_files=Rfiles,author="YL",
+</span><span class='line'>                      example_code=FALSE,email="yunlong.nie@stat.ubc.ca")
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>require(roxygen2)
+</span><span class='line'>
+</span><span class='line'>roxygenise(package.dir="BayDR",overwrite=TRUE) # wirte some in the C++ files too, like in the DatDen_X_C
+</span><span class='line'>
+</span><span class='line'># add useDynLib(BayDR) at the end of NAMESPACE
+</span><span class='line'>
+</span><span class='line'>system(paste("cp -r data ",paste0(packageName,"/")))
+</span><span class='line'>sink(file=paste0(packageName,"/NAMESPACE"),append=TRUE)
+</span><span class='line'>cat("useDynLib(",packageName,")",sep="")
+</span><span class='line'>sink()
+</span><span class='line'>file.copy(from="DESCRIPTION",to=paste0(packageName,"/"),overwrite=TRUE)
+</span><span class='line'>desp= readLines(con=paste0(packageName,"/","DESCRIPTION"))
+</span><span class='line'>desp[4] = paste("Version: ", verNo)
+</span><span class='line'>writeLines(desp,con=paste0(packageName,"/","DESCRIPTION"))
+</span><span class='line'># then copy the description file and data folder, change the verion number in the description file. 
+</span><span class='line'>
+</span><span class='line'># command line to the the folder which bayDR locates
+</span><span class='line'>
+</span><span class='line'>system(paste("R CMD build",packageName))
+</span><span class='line'>filenames = list.files("~/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/")
+</span><span class='line'>system(paste("R CMD check",filenames[grep(as.character(verNo),filenames)]))
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sorry for throwing this ugly code first here. But if you look carefully, probably you did notice that there is a <code>system()</code> function there. For example,</p>
+
+<pre><code>    system(paste("cp -r data ",paste0(packageName,"/")))
+</code></pre>
+
+<p>which I call bash to copy the data file into another directory. It&rsquo;s actually super simple but spares you open your terminal or click your mouse. The problem is sometimes after a long time when you cannot exactly recall every step, but you need to reproduce your work. Running everything on a script avoid that issue. It is especially helpful for file management.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/21/website-link-to-your-own-post/">Website: Link to Your Own Post</a></h1>
     
     
@@ -297,52 +413,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/19/redirect-personal-website-to-here/">Redirect Personal Website to Here</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-19T02:30:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>my old personal website is <code>stat.ubc.ca/~yunlong.nie</code> and when visitors come to this web page, I&rsquo;d like to guide them to this new blog automatically.</h3>
-
-<p>Here we need to make use <code>.haccess</code> file.</p>
-
-<pre><code>      $ cd public_html/
-      $ vi .haccess
-      # put the following code into this file
-      Redirect 301 /~yunlong.nie/ http://yunlongnie.github.io/
-</code></pre>
-
-<p>Bingo! This <a href="http://www.uvm.edu/webguide/?Page=redirects.html&amp;SM=urlsubmenu.html">website</a> has more details.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/2/">&larr; Older</a></li>
@@ -388,6 +458,10 @@
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: let R run bash code in backgroud</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/21/website-link-to-your-own-post/">Website: Link to your own post</a>
       </li>
     
@@ -401,10 +475,6 @@
     
       <li class="post">
         <a href="/blog/2013/07/19/run-bash-code-and-documentation-manage/">Run Bash Code and documentation manage</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/19/redirect-personal-website-to-here/">Redirect personal website to here</a>
       </li>
     
   </ul>
@@ -429,10 +499,11 @@
 <section>
   <h1>Tags</h1>
   <ul class="tag-cloud">
-    <a style="font-size: 185%" href="/tags/bash/">bash</a>
+    <a style="font-size: 210%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 150%" href="/tags/html/">html</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
+<a style="font-size: 90%" href="/tags/r/">r</a>
 <a style="font-size: 90%" href="/tags/r-and-latex/">r&latex</a>
 
   </ul>
@@ -441,6 +512,7 @@
   <h1>Categories</h1>
   <ul id="categories">
     <li class='category'><a href='/blog/categories/github/'>Github (1)</a></li>
+<li class='category'><a href='/blog/categories/r/'>R (1)</a></li>
 <li class='category'><a href='/blog/categories/latex/'>latex (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (1)</a></li>
