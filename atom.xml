@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-19T15:20:42-07:00</updated>
+  <updated>2013-07-21T00:28:15-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Website: Link to your own post]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/21/website-link-to-your-own-post/"/>
+    <updated>2013-07-21T00:21:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/21/website-link-to-your-own-post</id>
+    <content type="html"><![CDATA[<p>Sometimes, we need to link to our own post. You can, of course, link with <code>http://</code> but I&rsquo;d rather use a shorter one.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>my previous [post](/blog/2013/07/18/sidebar/)
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>my previous <a href="http://YunlongNie.github.io/blog/2013/07/18/sidebar/">post</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Website: make google search your website]]></title>
@@ -309,7 +325,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x79;&#x75;&#110;&#x6c;&#111;&#x6e;&#103;&#x6e;&#105;&#x65;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;&#x2e;">&#121;&#x75;&#x6e;&#x6c;&#x6f;&#x6e;&#103;&#x6e;&#x69;&#x65;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#x2e;&#99;&#111;&#109;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x79;&#x75;&#x6e;&#x6c;&#111;&#x6e;&#x67;&#x6e;&#105;&#101;&#64;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#111;&#109;&#x2e;">&#121;&#117;&#110;&#x6c;&#111;&#110;&#103;&#110;&#105;&#x65;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>

@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: octopress | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/tags/octopress/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-19T15:20:42-07:00</updated>
+  <updated>2013-07-21T00:28:15-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Website: Link to your own post]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/21/website-link-to-your-own-post/"/>
+    <updated>2013-07-21T00:21:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/21/website-link-to-your-own-post</id>
+    <content type="html"><![CDATA[<p>Sometimes, we need to link to our own post. You can, of course, link with <code>http://</code> but I&rsquo;d rather use a shorter one.</p>
+
+<p>```
+my previous <a href="/blog/2013/07/18/sidebar/">post</a></p>
+
+<p>```</p>
+
+<p>my previous <a href="/blog/2013/07/18/sidebar/">post</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tag Cloud]]></title>
@@ -58,7 +74,7 @@ The code for installation is</p>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x79;&#117;&#x6e;&#108;&#111;&#x6e;&#x67;&#110;&#105;&#x65;&#x40;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#x6f;&#109;&#x2e;">&#x79;&#117;&#110;&#x6c;&#111;&#x6e;&#x67;&#x6e;&#105;&#101;&#x40;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#x6d;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x79;&#x75;&#x6e;&#x6c;&#111;&#x6e;&#x67;&#x6e;&#x69;&#101;&#64;&#x67;&#105;&#116;&#104;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;&#x2e;">&#x79;&#117;&#x6e;&#x6c;&#111;&#x6e;&#x67;&#x6e;&#x69;&#101;&#64;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#x63;&#111;&#109;&#x2e;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
