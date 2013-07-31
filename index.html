@@ -109,6 +109,44 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/31/master-defense/">Master Defense</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-31T14:45:00-07:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I did my master defence today and it&rsquo;s about Double robustness in Bayesian framework.</p>
+
+<p>Here is my <a href="http://yunlongnie.github.io/files/Slide_V3.pdf">slide</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/21/writing-indentificality/">Writing: Indentificality</a></h1>
     
     
@@ -357,80 +395,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/">R: My Own Function to Generate Text Code for Figure</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-19T14:53:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This topic belongs to the reproducable research topic. <strong>Sweave</strong> is actually a good way of combining R and Latex. However sometime we just need to generate a <code>.tex</code> file so that we can input into main <code>.tex</code> file.</p>
-
-<p>Here is my way:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>print.figure &lt;- function(writeto,filename,placement="H",caption,label)
-</span><span class='line'>{
-</span><span class='line'>  ## writeto is the location like ~/mytex.tex
-</span><span class='line'>  ## filename is the pic location usually a pdf 
-</span><span class='line'>  ##  placement can be H or h
-</span><span class='line'>  sink(writeto)
-</span><span class='line'>  cat("\\begin{figure}[",placement,"]\n",sep="")
-</span><span class='line'>  cat("\\begin{center}\n",sep="")
-</span><span class='line'>  cat("\\includegraphics{",filename,"}\n",sep="")
-</span><span class='line'>  cat("\\end{center}\n",sep="")
-</span><span class='line'>  if(!missing(caption)) {cat("\\caption{", caption,"}\n",sep="")}
-</span><span class='line'>  if(!missing(label)) {cat("\\label{", label,"}\n",sep="")}
-</span><span class='line'>  cat("\\end{figure}\n",sep="")
-</span><span class='line'>  sink()
-</span><span class='line'>  system(paste("cat",writeto))
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>sink</code> and <code>cat</code> can be a powerful combination. They can make latex files in R adn do a lot of things.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/2/">&larr; Older</a></li>
@@ -476,6 +440,10 @@
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/31/master-defense/">Master Defense</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/21/writing-indentificality/">Writing: Indentificality</a>
       </li>
     
@@ -489,10 +457,6 @@
     
       <li class="post">
         <a href="/blog/2013/07/19/website-make-google-search-your-website/">Website: make google search your website</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/">R: my own function to generate text code for figure</a>
       </li>
     
   </ul>
@@ -517,7 +481,8 @@
 <section>
   <h1>Tags</h1>
   <ul class="tag-cloud">
-    <a style="font-size: 90%" href="/tags/writing/">Writing</a>
+    <a style="font-size: 90%" href="/tags/stats/">Stats</a>
+<a style="font-size: 90%" href="/tags/writing/">Writing</a>
 <a style="font-size: 210%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 150%" href="/tags/html/">html</a>
@@ -535,6 +500,7 @@
 <li class='category'><a href='/blog/categories/latex/'>latex (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (2)</a></li>
+<li class='category'><a href='/blog/categories/research/'>research (1)</a></li>
 <li class='category'><a href='/blog/categories/website/'>website (7)</a></li>
 
   </ul>

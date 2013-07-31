@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: Stats | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/tags/stats/atom.xml" rel="self"/>
+  <link href="http://YunlongNie.github.io/"/>
+  <updated>2013-07-31T14:51:44-07:00</updated>
+  <id>http://YunlongNie.github.io/</id>
+  <author>
+    <name><![CDATA[joha]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Master Defense]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/31/master-defense/"/>
+    <updated>2013-07-31T14:45:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/31/master-defense</id>
+    <content type="html"><![CDATA[<p>I did my master defence today and it&rsquo;s about Double robustness in Bayesian framework.</p>
+
+<p>Here is my <a href="http://yunlongnie.github.io/files/Slide_V3.pdf">slide</a></p>
+]]></content>
+  </entry>
+  
+</feed>

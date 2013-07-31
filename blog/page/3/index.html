@@ -109,6 +109,42 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/18/tag-cloud/">Tag Cloud</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-18T19:07:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>see the <a href="http://codemacro.com/2012/07/18/add-tag-to-octopress/">tutorial</a> here</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/18/theme/">Theme</a></h1>
     
     
@@ -336,127 +372,9 @@ enter the password for B.</p></li>
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/17/how-to-bulid-this-blog/">Github With Jeklly Boostrap</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T01:51:00-07:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>This is a record about how I set up this blog and because this is quite new to me, it&rsquo;s probably a good idea to write the whole process down for reference in the future.</p>
-
-<h2>Preparation</h2>
-
-<ul>
-<li>first set up an account in <a href="https://github.com/">github</a>. You can follow the tutorial <a href="https://help.github.com/articles/set-up-git">here</a>.</li>
-<li>highly recommend you <a href="https://help.github.com/articles/generating-ssh-keys">set up the ssh key</a> too.</li>
-</ul>
-
-
-<h2>Creat your website repo</h2>
-
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#121;&#117;&#110;&#108;&#x6f;&#x6e;&#103;&#110;&#x69;&#x65;&#x40;&#103;&#105;&#116;&#104;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;&#46;">&#x79;&#117;&#x6e;&#x6c;&#x6f;&#x6e;&#103;&#x6e;&#105;&#101;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#99;&#111;&#109;&#46;</a> You have two choices here.</p>
-
-<ul>
-<li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
-<li>a less simple one is to use <a href="http://jekyllbootstrap.com/">jeklly boostrap</a>.  Next I will focus on this option.</li>
-</ul>
-
-
-<h3>install jekyll-boostrap</h3>
-
-<pre><code>    $ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com  
-    $ cd USERNAME.github.com 
-    $ git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git  
-    $ git push origin master
-</code></pre>
-
-<h3>check out your wesite in the local browser.</h3>
-
-<p>Go to the folder USENAME.github.com first.</p>
-
-<pre><code>    $ cd USERNAME.git.hub.com
-    $ jeklly  server
-</code></pre>
-
-<p>You can check it out on this website <a href="http://localhost:4000/">http://localhost:4000/</a>.
-If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">jekyll</a> webiste and there is a page for <a href="http://jekyllrb.com/docs/installation/">isntallation</a>.</p>
-
-<h3>how to post?</h3>
-
-<p>Notice there is a rakefile in your USERNAME.github.com folder. You <strong>must</strong> have this file to creat a new post.</p>
-
-<pre><code>    $ cd USENAME.github.com
-    $ rake post title="your title"
-</code></pre>
-
-<p>the codes above will creat a markdown file in the folder <code>\_post/</code> with a filename yyyy-mm-dd-title.md, say 2013-7-16-first-blog.md. The contents will be like blow.</p>
-
-<pre><code>    layout: post
-    title: "your title "
-    description: ""
-    category: 
-    tags: [ ]
-</code></pre>
-
-<p>then you can edit this md file to make a post. For example, set up your categories and tags.</p>
-
-<h3>update the post into remote repo in github</h3>
-
-<p>remember all the things we have done so far updates only on your local machine and you can only see it from <a href="http://localhost:4000/">local server</a>. Next we will try to make them online so anyone can see your website on <a href="http://USERNAME.github.io/.">http://USERNAME.github.io/.</a></p>
-
-<ul>
-<li>first make sure you set up a repo in github called exactly USERNAME.github.com.</li>
-<li><p>commit your local changes with a comment.</p>
-
-<pre><code>  $git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
-  $git add .
-  $git commit -m "your comment"
-</code></pre></li>
-<li><p>push the master</p>
-
-<pre><code> $git push origin master
-</code></pre></li>
-</ul>
-
-
-<p>check out if your files in the github repo get updated.</p>
-
-<h3>merge the files in the remote server with local files.</h3>
-
-<p>some times files are edited directly on github repo, making the files on server latest version. You need to <strong>merge</strong> the data from remote server into your local machine.</p>
-
-<pre><code>   $git pull origin master 
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
+    
+    <li class="previous"><a href="/blog/page/4/">&larr; Older</a></li>
     
     <li><a href="/blog/archives">Blog Archives</a></li>
     
@@ -501,6 +419,10 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/31/master-defense/">Master Defense</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/21/writing-indentificality/">Writing: Indentificality</a>
       </li>
     
@@ -514,10 +436,6 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
     
       <li class="post">
         <a href="/blog/2013/07/19/website-make-google-search-your-website/">Website: make google search your website</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/">R: my own function to generate text code for figure</a>
       </li>
     
   </ul>
@@ -542,7 +460,8 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
 <section>
   <h1>Tags</h1>
   <ul class="tag-cloud">
-    <a style="font-size: 90%" href="/tags/writing/">Writing</a>
+    <a style="font-size: 90%" href="/tags/stats/">Stats</a>
+<a style="font-size: 90%" href="/tags/writing/">Writing</a>
 <a style="font-size: 210%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 150%" href="/tags/html/">html</a>
@@ -560,6 +479,7 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
 <li class='category'><a href='/blog/categories/latex/'>latex (1)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (2)</a></li>
+<li class='category'><a href='/blog/categories/research/'>research (1)</a></li>
 <li class='category'><a href='/blog/categories/website/'>website (7)</a></li>
 
   </ul>
