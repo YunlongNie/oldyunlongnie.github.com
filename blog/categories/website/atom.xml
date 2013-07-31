@@ -4,7 +4,7 @@
   <title><![CDATA[Category: website | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/blog/categories/website/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-31T14:51:44-07:00</updated>
+  <updated>2013-07-31T14:56:14-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[how to link files in this blog]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/31/how-to-link-files-in-this-blog/"/>
+    <updated>2013-07-31T14:52:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/31/how-to-link-files-in-this-blog</id>
+    <content type="html"><![CDATA[<p>In the previous blog, I link the key word slide with a file link. Below is the way one realize it.</p>
+
+<p>*Creat a folder in under the <code>source' folder, say here I created a folder caller</code>files'.</p>
+
+<p>*Put the file in this folder</p>
+
+<p>*when you link you can do:
+<code>
+[slide](http://yunlongnie.github.io/files/Slide_V3.pdf)
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Website: Link to your own post]]></title>
@@ -74,22 +92,6 @@ The code for installation is</p>
 </code></pre>
 
 <p>There are other themes on this <a href="http://opthemes.com/">website</a>. Some of them are very cool actually. Check it out!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SideBar]]></title>
-    <link href="http://YunlongNie.github.io/blog/2013/07/18/sidebar/"/>
-    <updated>2013-07-18T12:14:00-07:00</updated>
-    <id>http://YunlongNie.github.io/blog/2013/07/18/sidebar</id>
-    <content type="html"><![CDATA[<h2>where to edit</h2>
-
-<p>*There is a <code>about.html</code> in directory <code>source/_include/custom/asides/about.html</code>. First give this file some content.</p>
-
-<p>*Then edit <code>_config.yml</code>, there is a defaul asides setting: add cutom/asides/about.html inside</p>
-
-<pre><code>    default_asides: [custom/asides/about.html,asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
-</code></pre>
 ]]></content>
   </entry>
   

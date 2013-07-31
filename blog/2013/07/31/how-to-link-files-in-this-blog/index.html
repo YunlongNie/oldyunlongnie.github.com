@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>R: my own function to generate text code for figure - YL's Blog</title>
+  <title>how to link files in this blog - YL's Blog</title>
   <meta name="author" content="joha">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure">
+  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/31/how-to-link-files-in-this-blog">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -107,7 +107,7 @@
   
   <header class="page-header">
     
-      <h1 class="entry-title">R: My Own Function to Generate Text Code for Figure</h1>
+      <h1 class="entry-title">How to Link Files in This Blog</h1>
     
     
       <p class="meta">
@@ -123,52 +123,24 @@
   
 
 
-<time datetime="2013-07-19T14:53:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+<time datetime="2013-07-31T14:52:00-07:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>This topic belongs to the reproducable research topic. <strong>Sweave</strong> is actually a good way of combining R and Latex. However sometime we just need to generate a <code>.tex</code> file so that we can input into main <code>.tex</code> file.</p>
+<div class="entry-content"><p>In the previous blog, I link the key word slide with a file link. Below is the way one realize it.</p>
 
-<p>Here is my way:</p>
+<p>*Creat a folder in under the <code>source' folder, say here I created a folder caller</code>files&#8217;.</p>
+
+<p>*Put the file in this folder</p>
+
+<p>*when you link you can do:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>print.figure &lt;- function(writeto,filename,placement="H",caption,label)
-</span><span class='line'>{
-</span><span class='line'>  ## writeto is the location like ~/mytex.tex
-</span><span class='line'>  ## filename is the pic location usually a pdf 
-</span><span class='line'>  ##  placement can be H or h
-</span><span class='line'>  sink(writeto)
-</span><span class='line'>  cat("\\begin{figure}[",placement,"]\n",sep="")
-</span><span class='line'>  cat("\\begin{center}\n",sep="")
-</span><span class='line'>  cat("\\includegraphics{",filename,"}\n",sep="")
-</span><span class='line'>  cat("\\end{center}\n",sep="")
-</span><span class='line'>  if(!missing(caption)) {cat("\\caption{", caption,"}\n",sep="")}
-</span><span class='line'>  if(!missing(label)) {cat("\\label{", label,"}\n",sep="")}
-</span><span class='line'>  cat("\\end{figure}\n",sep="")
-</span><span class='line'>  sink()
-</span><span class='line'>  system(paste("cat",writeto))
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[slide](http://yunlongnie.github.io/files/Slide_V3.pdf)</span></code></pre></td></tr></table></div></figure>
 
-
-<p><code>sink</code> and <code>cat</code> can be a powerful combination. They can make latex files in R adn do a lot of things.</p>
 </div>
 
 
@@ -191,12 +163,12 @@
   
 
 
-<time datetime="2013-07-19T14:53:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+<time datetime="2013-07-31T14:52:00-07:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/latex/'>latex</a>, <a class='category' href='/blog/categories/r/'>r</a>
+    <a class='category' href='/blog/categories/website/'>website</a>
   
 </span>
 
@@ -205,7 +177,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/31/how-to-link-files-in-this-blog/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/31/how-to-link-files-in-this-blog/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -220,14 +192,10 @@
     <ul class="pager">
       
       <li class="previous"><a class="basic-alignment left"
-        href="/blog/2013/07/19/run-bash-code-and-documentation-manage/" title="Previous Post:
-        Run Bash Code and documentation manage">&laquo; Run Bash Code and documentation manage</a></li>
+        href="/blog/2013/07/31/master-defense/" title="Previous Post:
+        Master Defense">&laquo; Master Defense</a></li>
       
       <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2013/07/19/website-make-google-search-your-website/"
-        title="Next Post: Website: make google search your website">Website: make google search your website
-        &raquo;</a></li>
       
     </ul>
   </footer>

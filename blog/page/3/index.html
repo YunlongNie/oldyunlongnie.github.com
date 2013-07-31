@@ -109,6 +109,64 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/">Make an Existing Folder Into a New Github Repo</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-18T22:43:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I am quite new to Github and it took me 2 days to get into it. Just keep a record for future reference. ### Say if you have a foler on your machine and you&rsquo;d like to creat a new repo on github server.</p>
+
+<h3>* suppose your local folder is <code>~/myfold/</code>. The first thing we do is to creat a repo on github server we call it <code>myfold</code>.</h3>
+
+<h3>* next we add this folder to the server.</h3>
+
+<pre><code>    $ git init
+    # initialise a git
+    $ git add .
+    $ git commit -m "your comment"
+    # commit the files
+    $ git remote add origin https://github.com/YunlongNie/myfolder.git
+    # point origin to the myfolder.git repo
+    $ git push -u origin master
+</code></pre>
+
+<p>*### note that some time you may like to <strong>remove</strong> or <strong>rename</strong> the origin</p>
+
+<pre><code>    $git remote rename &lt;old&gt; &lt;new&gt;
+    $git remote remove &lt;name&gt;
+</code></pre>
+
+<p>Check out this website about <a href="http://git-scm.com/docs/git-remote">git-remote</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/18/tag-cloud/">Tag Cloud</a></h1>
     
     
@@ -318,60 +376,6 @@ The code for installation is</p>
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/17/login-without-password/">Login Without Password</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T02:12:00-07:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>say you wanna log into a linux server to do some job. But every time it requires you enter the password, which at least I feel annoying. Here is a way you can generate a key and login without password.</p>
-
-<p>Suppose we call the local machine A and server as B. Of course, you should have a account for B, say joha@B and password: thissiapassword.</p>
-
-<h1>How?</h1>
-
-<ol>
-<li><p>first suppose you are on A already and you need to generate a pair of authentication keys. Do not enter any passphrase.
-<code>ssh-keygen -t rsa</code></p></li>
-<li><p>Defaultly, it will creat a key in ~/.ssh/.</p></li>
-<li><p>use ssh to creat a folder ~/.ssh as use joha on B. if the folder already exits, it&rsquo;s ok.
-<code>ssh joha@B mkdir -p .ssh</code>
-enter the password for B.</p></li>
-<li><p>append A&rsquo;s new public key to joha@B:.ssh/authorized_keys and enter the password for b again.
-<code>cat .ssh/id_rsa.pub | ssh joha@B 'cat &gt;&gt; .ssh/authorized keys</code></p></li>
-<li><p>then you can login B without password
-<code>ssh joha@B</code></p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/4/">&larr; Older</a></li>
@@ -419,6 +423,10 @@ enter the password for B.</p></li>
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/31/how-to-link-files-in-this-blog/">how to link files in this blog</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/31/master-defense/">Master Defense</a>
       </li>
     
@@ -432,10 +440,6 @@ enter the password for B.</p></li>
     
       <li class="post">
         <a href="/blog/2013/07/21/website-link-to-your-own-post/">Website: Link to your own post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/19/website-make-google-search-your-website/">Website: make google search your website</a>
       </li>
     
   </ul>
@@ -462,9 +466,9 @@ enter the password for B.</p></li>
   <ul class="tag-cloud">
     <a style="font-size: 90%" href="/tags/stats/">Stats</a>
 <a style="font-size: 90%" href="/tags/writing/">Writing</a>
-<a style="font-size: 210%" href="/tags/bash/">bash</a>
+<a style="font-size: 193%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
-<a style="font-size: 150%" href="/tags/html/">html</a>
+<a style="font-size: 142%" href="/tags/html/">html</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
 <a style="font-size: 90%" href="/tags/r/">r</a>
 <a style="font-size: 90%" href="/tags/r-and-latex/">r&latex</a>
@@ -480,7 +484,7 @@ enter the password for B.</p></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (2)</a></li>
 <li class='category'><a href='/blog/categories/research/'>research (1)</a></li>
-<li class='category'><a href='/blog/categories/website/'>website (7)</a></li>
+<li class='category'><a href='/blog/categories/website/'>website (8)</a></li>
 
   </ul>
 </section>

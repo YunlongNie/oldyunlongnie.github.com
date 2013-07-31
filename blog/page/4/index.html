@@ -109,6 +109,60 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/17/login-without-password/">Login Without Password</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-17T02:12:00-07:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>say you wanna log into a linux server to do some job. But every time it requires you enter the password, which at least I feel annoying. Here is a way you can generate a key and login without password.</p>
+
+<p>Suppose we call the local machine A and server as B. Of course, you should have a account for B, say joha@B and password: thissiapassword.</p>
+
+<h1>How?</h1>
+
+<ol>
+<li><p>first suppose you are on A already and you need to generate a pair of authentication keys. Do not enter any passphrase.
+<code>ssh-keygen -t rsa</code></p></li>
+<li><p>Defaultly, it will creat a key in ~/.ssh/.</p></li>
+<li><p>use ssh to creat a folder ~/.ssh as use joha on B. if the folder already exits, it&rsquo;s ok.
+<code>ssh joha@B mkdir -p .ssh</code>
+enter the password for B.</p></li>
+<li><p>append A&rsquo;s new public key to joha@B:.ssh/authorized_keys and enter the password for b again.
+<code>cat .ssh/id_rsa.pub | ssh joha@B 'cat &gt;&gt; .ssh/authorized keys</code></p></li>
+<li><p>then you can login B without password
+<code>ssh joha@B</code></p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/17/how-to-bulid-this-blog/">Github With Jeklly Boostrap</a></h1>
     
     
@@ -144,7 +198,7 @@
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x79;&#117;&#110;&#108;&#111;&#x6e;&#103;&#x6e;&#x69;&#101;&#64;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;&#x2e;">&#121;&#117;&#110;&#108;&#x6f;&#x6e;&#x67;&#110;&#105;&#101;&#64;&#103;&#x69;&#116;&#x68;&#x75;&#x62;&#x2e;&#x63;&#x6f;&#109;&#x2e;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#121;&#117;&#x6e;&#108;&#111;&#x6e;&#103;&#x6e;&#x69;&#101;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;&#46;">&#121;&#117;&#110;&#x6c;&#111;&#110;&#103;&#110;&#x69;&#x65;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#111;&#109;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>
@@ -269,6 +323,10 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/07/31/how-to-link-files-in-this-blog/">how to link files in this blog</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/31/master-defense/">Master Defense</a>
       </li>
     
@@ -282,10 +340,6 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
     
       <li class="post">
         <a href="/blog/2013/07/21/website-link-to-your-own-post/">Website: Link to your own post</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/19/website-make-google-search-your-website/">Website: make google search your website</a>
       </li>
     
   </ul>
@@ -312,9 +366,9 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
   <ul class="tag-cloud">
     <a style="font-size: 90%" href="/tags/stats/">Stats</a>
 <a style="font-size: 90%" href="/tags/writing/">Writing</a>
-<a style="font-size: 210%" href="/tags/bash/">bash</a>
+<a style="font-size: 193%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
-<a style="font-size: 150%" href="/tags/html/">html</a>
+<a style="font-size: 142%" href="/tags/html/">html</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
 <a style="font-size: 90%" href="/tags/r/">r</a>
 <a style="font-size: 90%" href="/tags/r-and-latex/">r&latex</a>
@@ -330,7 +384,7 @@ If you have no Ruby and RubyGems intalled. Go to <a href="http://jekyllrb.com/">
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (2)</a></li>
 <li class='category'><a href='/blog/categories/research/'>research (1)</a></li>
-<li class='category'><a href='/blog/categories/website/'>website (7)</a></li>
+<li class='category'><a href='/blog/categories/website/'>website (8)</a></li>
 
   </ul>
 </section>
