@@ -4,7 +4,7 @@
   <title><![CDATA[Tag: thesis | YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/tags/thesis/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-08-23T12:32:59-07:00</updated>
+  <updated>2013-08-23T12:44:24-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -79,6 +79,14 @@ ubcthesis.tex
 <p>complile the latex file in Latex twice. Then complile it with BibTex twice. Once again, complile it in Latex twice.</p>
 
 <p>Bingo!</p>
+
+<h1><code>\Input</code> command in latex</h1>
+
+<p>Often, I recommmand to use input when you are writing a long article in latex so that you can put tex code in each chapter into seperate tex files. The main latex file for to generate the whole pdf is just a skeletion of your book or thesis. For me, it is always a pain in the ass to track a long tex files, say including 10,000 lines of code.</p>
+
+<p>you can even use \input in your <code>input</code> files. But \include cannot be used in that way.</p>
+
+<p>\input is super useful when you like to creat figures and tables. It allows reproducible work. See my older <a href="http://yunlongnie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/">post</a> about how you generate a tex code for figure.</p>
 ]]></content>
   </entry>
   
