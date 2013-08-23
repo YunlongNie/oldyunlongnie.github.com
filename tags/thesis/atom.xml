@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: latex | YL's Blog]]></title>
-  <link href="http://YunlongNie.github.io/blog/categories/latex/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: thesis | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/tags/thesis/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
   <updated>2013-08-23T12:32:59-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
@@ -79,38 +79,6 @@ ubcthesis.tex
 <p>complile the latex file in Latex twice. Then complile it with BibTex twice. Once again, complile it in Latex twice.</p>
 
 <p>Bingo!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[R: my own function to generate text code for figure]]></title>
-    <link href="http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/"/>
-    <updated>2013-07-19T14:53:00-07:00</updated>
-    <id>http://YunlongNie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure</id>
-    <content type="html"><![CDATA[<p>This topic belongs to the reproducable research topic. <strong>Sweave</strong> is actually a good way of combining R and Latex. However sometime we just need to generate a <code>.tex</code> file so that we can input into main <code>.tex</code> file.</p>
-
-<p>Here is my way:</p>
-
-<p><code>
-print.figure &lt;- function(writeto,filename,placement="H",caption,label)
-{
-  ## writeto is the location like ~/mytex.tex
-  ## filename is the pic location usually a pdf
-  ##  placement can be H or h
-  sink(writeto)
-  cat("\\begin{figure}[",placement,"]\n",sep="")
-  cat("\\begin{center}\n",sep="")
-  cat("\\includegraphics{",filename,"}\n",sep="")
-  cat("\\end{center}\n",sep="")
-  if(!missing(caption)) {cat("\\caption{", caption,"}\n",sep="")}
-  if(!missing(label)) {cat("\\label{", label,"}\n",sep="")}
-  cat("\\end{figure}\n",sep="")
-  sink()
-  system(paste("cat",writeto))
-}
-</code></p>
-
-<p><code>sink</code> and <code>cat</code> can be a powerful combination. They can make latex files in R adn do a lot of things.</p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[YL's Blog]]></title>
   <link href="http://YunlongNie.github.io/atom.xml" rel="self"/>
   <link href="http://YunlongNie.github.io/"/>
-  <updated>2013-07-31T14:56:14-07:00</updated>
+  <updated>2013-08-23T12:32:59-07:00</updated>
   <id>http://YunlongNie.github.io/</id>
   <author>
     <name><![CDATA[joha]]></name>
@@ -12,6 +12,310 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Latex Tips when doing Thesis]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis/"/>
+    <updated>2013-08-23T12:02:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis</id>
+    <content type="html"><![CDATA[<p>I just finish my thesis recently and it is time now to summary some the techniques that I feel quite handy.</p>
+
+<h1>Template</h1>
+
+<p>The template can be downloaded from this <a href="" title="http://www.phys.washington.edu/users/mforbes/projects/ubcthesis/">website</a>. In fact, all the need is the following files:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>genthesis.cls
+</span><span class='line'>sample.bib
+</span><span class='line'>ubcthesis.cls
+</span><span class='line'>ubcthesis.dtx
+</span><span class='line'>ubcthesis.ins
+</span><span class='line'>ubcthesis.tex</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Bibliography</h1>
+
+<p>I use the package called <strong>natbib</strong> to control the style of Biblography. <strong>natbib</strong> is a latex packages. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a>.</p>
+
+<h2>Step 1 make a bib file.</h2>
+
+<p>For example, my bib file is called <code>mybib.bib</code>, in which all the citation information is stored. Each term looks like this, which you can download easily from <strong>Google Scholar</strong>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@article{iwai1996boostrap,
+</span><span class='line'>  title={The boostrap theory of money: A search-theoretic foundation of monetary economics},
+</span><span class='line'>  author={Iwai, Katsuhito},
+</span><span class='line'>  journal={Structural Change and Economic Dynamics},
+</span><span class='line'>  volume={7},
+</span><span class='line'>  number={4},
+</span><span class='line'>  pages={451--477},
+</span><span class='line'>  year={1996},
+</span><span class='line'>  publisher={Elsevier}
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h2>Step 2 annouce the package in your latex file.</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\usepackage[authoryear,round]{natbib}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>autheryear,round</code> are certain option. In this case, the reference will be displayed like <code>AutherName(1988)</code>. More optionns are available. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a></p>
+
+<h2>Step 3 cite in the article</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\citet[iwai1996boostrap]</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 4 creat reference section</h2>
+
+<p>Put the folllowing code after last chapter and before the appendix</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\bibliographystyle{plainnat}
+</span><span class='line'>\bibliography{mybib}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 5 complile</h2>
+
+<p>complile the latex file in Latex twice. Then complile it with BibTex twice. Once again, complile it in Latex twice.</p>
+
+<p>Bingo!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Latex Tips When Doing Thesis]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis/"/>
+    <updated>2013-08-23T00:00:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis</id>
+    <content type="html"><![CDATA[<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Template</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: &#8216;DejaVu Sans Mono&#8217;, &#8216;Droid Sans Mono&#8217;, &#8216;Lucida Console&#8217;, Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<p>I just finish my thesis recently and it is time now to summary some the techniques that I feel quite handy. </p>
+
+<h1>Template</h1>
+
+<p>The template can be downloaded from this <a href="&#x27;http://www.phys.washington.edu/users/mforbes/projects/ubcthesis/&#x27;">website</a>. In fact, all the need is the following files: </p>
+
+<pre><code>genthesis.cls
+sample.bib
+ubcthesis.cls
+ubcthesis.dtx
+ubcthesis.ins
+ubcthesis.tex
+</code></pre>
+
+<h1>Bibliography</h1>
+
+<p>I use the package called <strong>natbib</strong> to control the style of Biblography. <strong>natbib</strong> is a latex packages. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a>.</p>
+
+<h2>Step 1 make a bib file.</h2>
+
+<p>For example, my bib file is called <code>mybib.bib</code>, in which all the citation information is stored. Each term looks like this, which you can download easily from <strong>Google Scholar</strong>.</p>
+
+<pre><code>@article{iwai1996boostrap,
+  title={The boostrap theory of money: A search-theoretic foundation of monetary economics},
+  author={Iwai, Katsuhito},
+  journal={Structural Change and Economic Dynamics},
+  volume={7},
+  number={4},
+  pages={451--477},
+  year={1996},
+  publisher={Elsevier}
+}
+</code></pre>
+
+<h2>Step 2 annouce the package in your latex file.</h2>
+
+<pre><code>\usepackage[authoryear,round]{natbib}
+</code></pre>
+
+<p>The <code>autheryear,round</code> are certain option. In this case, the reference will be displayed like <code>AutherName(1988)</code>. More optionns are available. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a></p>
+
+<h2>Step 3 cite in the article</h2>
+
+<pre><code>\citet[iwai1996boostrap]
+</code></pre>
+
+<h2>Step 4 creat reference section</h2>
+
+<p>Put the folllowing code after last chapter and before the appendix</p>
+
+<pre><code>\bibliographystyle{plainnat}
+\bibliography{mybib}
+</code></pre>
+
+<h2>Step 5 complile</h2>
+
+<p>complile the latex file in Latex twice. Then complile it with BibTex twice. Once again, complile it in Latex twice. </p>
+
+<p>Bingo! </p>
+
+</body>
+
+</html>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[how to link files in this blog]]></title>
@@ -475,7 +779,7 @@ enter the password for B.</p></li>
 
 <h2>Creat your website repo</h2>
 
-<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#121;&#117;&#x6e;&#108;&#111;&#x6e;&#103;&#x6e;&#x69;&#101;&#64;&#103;&#105;&#116;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;&#46;">&#121;&#117;&#110;&#x6c;&#111;&#110;&#103;&#110;&#x69;&#x65;&#x40;&#103;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#111;&#109;&#46;</a> You have two choices here.</p>
+<p>next creat a repo called USERNAMR.github.com. In my case, since my username is YunlongNie. It will be <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#121;&#117;&#110;&#108;&#111;&#110;&#x67;&#110;&#105;&#101;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#x6d;&#46;">&#121;&#117;&#x6e;&#x6c;&#x6f;&#x6e;&#x67;&#x6e;&#x69;&#x65;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;&#46;</a> You have two choices here.</p>
 
 <ul>
 <li>a simple one is to make use of <a href="http://pages.github.com/">github pages</a>.</li>

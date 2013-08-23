@@ -109,6 +109,364 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/08/23/latex-tips-when-doing-thesis/">Latex Tips When Doing Thesis</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-23T12:02:00-07:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I just finish my thesis recently and it is time now to summary some the techniques that I feel quite handy.</p>
+
+<h1>Template</h1>
+
+<p>The template can be downloaded from this <a href="" title="http://www.phys.washington.edu/users/mforbes/projects/ubcthesis/">website</a>. In fact, all the need is the following files:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>genthesis.cls
+</span><span class='line'>sample.bib
+</span><span class='line'>ubcthesis.cls
+</span><span class='line'>ubcthesis.dtx
+</span><span class='line'>ubcthesis.ins
+</span><span class='line'>ubcthesis.tex</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Bibliography</h1>
+
+<p>I use the package called <strong>natbib</strong> to control the style of Biblography. <strong>natbib</strong> is a latex packages. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a>.</p>
+
+<h2>Step 1 make a bib file.</h2>
+
+<p>For example, my bib file is called <code>mybib.bib</code>, in which all the citation information is stored. Each term looks like this, which you can download easily from <strong>Google Scholar</strong>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@article{iwai1996boostrap,
+</span><span class='line'>  title={The boostrap theory of money: A search-theoretic foundation of monetary economics},
+</span><span class='line'>  author={Iwai, Katsuhito},
+</span><span class='line'>  journal={Structural Change and Economic Dynamics},
+</span><span class='line'>  volume={7},
+</span><span class='line'>  number={4},
+</span><span class='line'>  pages={451--477},
+</span><span class='line'>  year={1996},
+</span><span class='line'>  publisher={Elsevier}
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h2>Step 2 annouce the package in your latex file.</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\usepackage[authoryear,round]{natbib}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>autheryear,round</code> are certain option. In this case, the reference will be displayed like <code>AutherName(1988)</code>. More optionns are available. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a></p>
+
+<h2>Step 3 cite in the article</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\citet[iwai1996boostrap]</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 4 creat reference section</h2>
+
+<p>Put the folllowing code after last chapter and before the appendix</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\bibliographystyle{plainnat}
+</span><span class='line'>\bibliography{mybib}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 5 complile</h2>
+
+<p>complile the latex file in Latex twice. Then complile it with BibTex twice. Once again, complile it in Latex twice.</p>
+
+<p>Bingo!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/23/latex-tips-when-doing-thesis/">Latex Tips When Doing Thesis</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-23T00:00:00-07:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Template</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: &#8216;DejaVu Sans Mono&#8217;, &#8216;Droid Sans Mono&#8217;, &#8216;Lucida Console&#8217;, Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<p>I just finish my thesis recently and it is time now to summary some the techniques that I feel quite handy. </p>
+
+<h1>Template</h1>
+
+<p>The template can be downloaded from this <a href="&#x27;http://www.phys.washington.edu/users/mforbes/projects/ubcthesis/&#x27;">website</a>. In fact, all the need is the following files: </p>
+
+<pre><code>genthesis.cls
+sample.bib
+ubcthesis.cls
+ubcthesis.dtx
+ubcthesis.ins
+ubcthesis.tex
+</code></pre>
+
+<h1>Bibliography</h1>
+
+<p>I use the package called <strong>natbib</strong> to control the style of Biblography. <strong>natbib</strong> is a latex packages. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a>.</p>
+
+<h2>Step 1 make a bib file.</h2>
+
+<p>For example, my bib file is called <code>mybib.bib</code>, in which all the citation information is stored. Each term looks like this, which you can download easily from <strong>Google Scholar</strong>.</p>
+
+<pre><code>@article{iwai1996boostrap,
+  title={The boostrap theory of money: A search-theoretic foundation of monetary economics},
+  author={Iwai, Katsuhito},
+  journal={Structural Change and Economic Dynamics},
+  volume={7},
+  number={4},
+  pages={451--477},
+  year={1996},
+  publisher={Elsevier}
+}
+</code></pre>
+
+<h2>Step 2 annouce the package in your latex file.</h2>
+
+<pre><code>\usepackage[authoryear,round]{natbib}
+</code></pre>
+
+<p>The <code>autheryear,round</code> are certain option. In this case, the reference will be displayed like <code>AutherName(1988)</code>. More optionns are available. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a></p>
+
+<h2>Step 3 cite in the article</h2>
+
+<pre><code>\citet[iwai1996boostrap]
+</code></pre>
+
+<h2>Step 4 creat reference section</h2>
+
+<p>Put the folllowing code after last chapter and before the appendix</p>
+
+<pre><code>\bibliographystyle{plainnat}
+\bibliography{mybib}
+</code></pre>
+
+<h2>Step 5 complile</h2>
+
+<p>complile the latex file in Latex twice. Then complile it with BibTex twice. Once again, complile it in Latex twice. </p>
+
+<p>Bingo! </p>
+
+</body>
+
+</html>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/31/how-to-link-files-in-this-blog/">How to Link Files in This Blog</a></h1>
     
     
@@ -244,167 +602,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: Let R Run Bash Code in Backgroud</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-21T00:35:00-07:00" pubdate data-updated="true">Jul 21<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Recently, I am making a R package. During this process, I found lots of useful stuff which worth a record. I will talk about how to make R packges with Rcpp, in which R code and C code are combined.</p>
-
-<p>Below is my R code for making a pacakge:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>
-</span><span class='line'>require(Rcpp)
-</span><span class='line'>
-</span><span class='line'>cfiles = paste("Cpp/",list.files("Cpp/"),sep="")
-</span><span class='line'>Rfiles = paste("R/",list.files("R/"),sep="")
-</span><span class='line'>packageName="BayDR"
-</span><span class='line'>verNo=2.2
-</span><span class='line'>system(paste("rm -rf",packageName))
-</span><span class='line'>#  delete the original bayDR folder 
-</span><span class='line'>Rcpp.package.skeleton(name=packageName,cpp_files=cfiles,code_files=Rfiles,author="YL",
-</span><span class='line'>                      example_code=FALSE,email="yunlong.nie@stat.ubc.ca")
-</span><span class='line'>
-</span><span class='line'>
-</span><span class='line'>require(roxygen2)
-</span><span class='line'>
-</span><span class='line'>roxygenise(package.dir="BayDR",overwrite=TRUE) # wirte some in the C++ files too, like in the DatDen_X_C
-</span><span class='line'>
-</span><span class='line'># add useDynLib(BayDR) at the end of NAMESPACE
-</span><span class='line'>
-</span><span class='line'>system(paste("cp -r data ",paste0(packageName,"/")))
-</span><span class='line'>sink(file=paste0(packageName,"/NAMESPACE"),append=TRUE)
-</span><span class='line'>cat("useDynLib(",packageName,")",sep="")
-</span><span class='line'>sink()
-</span><span class='line'>file.copy(from="DESCRIPTION",to=paste0(packageName,"/"),overwrite=TRUE)
-</span><span class='line'>desp= readLines(con=paste0(packageName,"/","DESCRIPTION"))
-</span><span class='line'>desp[4] = paste("Version: ", verNo)
-</span><span class='line'>writeLines(desp,con=paste0(packageName,"/","DESCRIPTION"))
-</span><span class='line'># then copy the description file and data folder, change the verion number in the description file. 
-</span><span class='line'>
-</span><span class='line'># command line to the the folder which bayDR locates
-</span><span class='line'>
-</span><span class='line'>system(paste("R CMD build",packageName))
-</span><span class='line'>filenames = list.files("~/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/")
-</span><span class='line'>system(paste("R CMD check",filenames[grep(as.character(verNo),filenames)]))
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Sorry for throwing this ugly code first here. But if you look carefully, probably you did notice that there is a <code>system()</code> function there. For example,</p>
-
-<pre><code>    system(paste("cp -r data ",paste0(packageName,"/")))
-</code></pre>
-
-<p>which I call bash to copy the data file into another directory. It&rsquo;s actually super simple but spares you open your terminal or click your mouse. The problem is sometimes after a long time when you cannot exactly recall every step, but you need to reproduce your work. Running everything on a script avoid that issue. It is especially helpful for file management.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/21/website-link-to-your-own-post/">Website: Link to Your Own Post</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-21T00:21:00-07:00" pubdate data-updated="true">Jul 21<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sometimes, we need to link to our own post. You can, of course, link with <code>http://</code> but I&rsquo;d rather use a shorter one.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>my previous [post](/blog/2013/07/18/sidebar/)
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Note that the default root directory is <code>/</code>, so you need to add  before <code>/blog</code></p>
-
-<p>my previous <a href="/blog/2013/07/18/sidebar/">post</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/2/">&larr; Older</a></li>
@@ -450,6 +647,14 @@
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/08/23/latex-tips-when-doing-thesis/">Latex Tips when doing Thesis</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/23/latex-tips-when-doing-thesis/">Latex Tips When Doing Thesis</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/31/how-to-link-files-in-this-blog/">how to link files in this blog</a>
       </li>
     
@@ -459,14 +664,6 @@
     
       <li class="post">
         <a href="/blog/2013/07/21/writing-indentificality/">Writing: Indentificality</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: let R run bash code in backgroud</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/21/website-link-to-your-own-post/">Website: Link to your own post</a>
       </li>
     
   </ul>
@@ -496,9 +693,11 @@
 <a style="font-size: 193%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 142%" href="/tags/html/">html</a>
+<a style="font-size: 90%" href="/tags/latex/">latex</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
 <a style="font-size: 90%" href="/tags/r/">r</a>
 <a style="font-size: 90%" href="/tags/r-and-latex/">r&latex</a>
+<a style="font-size: 90%" href="/tags/thesis/">thesis</a>
 
   </ul>
 </section>
@@ -507,7 +706,7 @@
   <ul id="categories">
     <li class='category'><a href='/blog/categories/github/'>Github (1)</a></li>
 <li class='category'><a href='/blog/categories/writing/'>Writing (1)</a></li>
-<li class='category'><a href='/blog/categories/latex/'>latex (1)</a></li>
+<li class='category'><a href='/blog/categories/latex/'>latex (2)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (2)</a></li>
 <li class='category'><a href='/blog/categories/research/'>research (1)</a></li>

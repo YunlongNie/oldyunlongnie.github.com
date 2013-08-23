@@ -109,6 +109,96 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/blog/2013/07/19/redirect-personal-website-to-here/">Redirect Personal Website to Here</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-19T02:30:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>my old personal website is <code>stat.ubc.ca/~yunlong.nie</code> and when visitors come to this web page, I&rsquo;d like to guide them to this new blog automatically.</h3>
+
+<p>Here we need to make use <code>.haccess</code> file.</p>
+
+<pre><code>      $ cd public_html/
+      $ vi .haccess
+      # put the following code into this file
+      Redirect 301 /~yunlong.nie/ http://yunlongnie.github.io/
+</code></pre>
+
+<p>Bingo! This <a href="http://www.uvm.edu/webguide/?Page=redirects.html&amp;SM=urlsubmenu.html">website</a> has more details.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/19/find-by-file-extension-and-do-sth/">Find by File Extension and Do Sth</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-19T00:03:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>say we wanna find all the file with the same extension within one folder and do sth else</h3>
+
+<pre><code>     cd ~/Downloads;
+     find . -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+     # first locate all the files with .mp3 then mv to a new folder
+
+     find . -iname "*.mp3" -exec rm {}  \;
+     # first locate all the files with .mp3 then delete them all
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/blog/2013/07/18/make-an-existing-folder-into-a-new-github-repo/">Make an Existing Folder Into a New Github Repo</a></h1>
     
     
@@ -244,138 +334,6 @@ The code for installation is</p>
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/18/sidebar/">SideBar</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-18T12:14:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>where to edit</h2>
-
-<p>*There is a <code>about.html</code> in directory <code>source/_include/custom/asides/about.html</code>. First give this file some content.</p>
-
-<p>*Then edit <code>_config.yml</code>, there is a defaul asides setting: add cutom/asides/about.html inside</p>
-
-<pre><code>    default_asides: [custom/asides/about.html,asides/recent_posts.html, asides/github.html, asides/delicious.html, asides/pinboard.html, asides/googleplus.html]
-</code></pre>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/18/how-to-add-a-page-on-the-navigation-bar/">How to Add a Page on the Navigation Bar</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-18T00:21:00-07:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>Big picture</h2>
-
-<p>The aim is to add links to the main navigation bar, the source page needs to be edited &lsquo;/source/_includes/custom/navigation.html&rsquo; which looks like:</p>
-
-<pre><code>    &lt;ul class="main-navigation"&gt;
-    &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-</code></pre>
-
-<p>for example you want to add a &lsquo;About me&rsquo; pages just add another line there like:</p>
-
-<pre><code>    &lt;li&gt;&lt;a href="/about"&gt;Archives&lt;/a&gt;&lt;/li&gt;
-</code></pre>
-
-<p>but you do need to add a &lsquo;about&rsquo; page in your root directory, that is, under the folder &lsquo;source/&rsquo;, the details can be found in this <a href="http://octopress.org/docs/blogging">page</a>.</p>
-
-<pre><code>    rake new_page[about]
-    # it will creat source/about/index.markdown
-    rake new_page[about.markdowm]
-    # it will creat source/about.markdown
-</code></pre>
-
-<p>Notice the difference between these two.</p>
-
-<h2>Step by Step</h2>
-
-<p>here we will show how to add a page say TA in the navigation bar step by step.</p>
-
-<ol>
-<li><p>first creat a page called &lsquo;TA&rsquo; under source</p>
-
-<pre><code> rake new_page[TA]
- # this will creat source/TA/index.markdown
-</code></pre></li>
-<li><p>edit the index.markdown as you want</p></li>
-<li><p>creat a item in the &lsquo;/source/_includes/custom/navigation.html&rsquo; and make it like this:</p>
-
-<pre><code> &lt;ul class="main-navigation"&gt;
- &lt;li&gt;&lt;a href="/"&gt;Blog&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="/archives"&gt;Archives&lt;/a&gt;&lt;/li&gt;
- &lt;li&gt;&lt;a href="/TA"&gt;TA&lt;/a&gt;&lt;/li&gt;
- &lt;/ul&gt;
-</code></pre></li>
-<li><p>then generate all the site and push to your github account.</p>
-
-<pre><code> rake generate
- rake preview
- rake deploy
-</code></pre></li>
-</ol>
-
-
-<h2>Done!</h2>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/blog/page/4/">&larr; Older</a></li>
@@ -423,6 +381,14 @@ The code for installation is</p>
     <li class="nav-header">Recent Posts</li>
     
       <li class="post">
+        <a href="/blog/2013/08/23/latex-tips-when-doing-thesis/">Latex Tips when doing Thesis</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/23/latex-tips-when-doing-thesis/">Latex Tips When Doing Thesis</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/31/how-to-link-files-in-this-blog/">how to link files in this blog</a>
       </li>
     
@@ -432,14 +398,6 @@ The code for installation is</p>
     
       <li class="post">
         <a href="/blog/2013/07/21/writing-indentificality/">Writing: Indentificality</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: let R run bash code in backgroud</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/21/website-link-to-your-own-post/">Website: Link to your own post</a>
       </li>
     
   </ul>
@@ -469,9 +427,11 @@ The code for installation is</p>
 <a style="font-size: 193%" href="/tags/bash/">bash</a>
 <a style="font-size: 90%" href="/tags/github/">github</a>
 <a style="font-size: 142%" href="/tags/html/">html</a>
+<a style="font-size: 90%" href="/tags/latex/">latex</a>
 <a style="font-size: 210%" href="/tags/octopress/">octopress</a>
 <a style="font-size: 90%" href="/tags/r/">r</a>
 <a style="font-size: 90%" href="/tags/r-and-latex/">r&latex</a>
+<a style="font-size: 90%" href="/tags/thesis/">thesis</a>
 
   </ul>
 </section>
@@ -480,7 +440,7 @@ The code for installation is</p>
   <ul id="categories">
     <li class='category'><a href='/blog/categories/github/'>Github (1)</a></li>
 <li class='category'><a href='/blog/categories/writing/'>Writing (1)</a></li>
-<li class='category'><a href='/blog/categories/latex/'>latex (1)</a></li>
+<li class='category'><a href='/blog/categories/latex/'>latex (2)</a></li>
 <li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
 <li class='category'><a href='/blog/categories/r/'>r (2)</a></li>
 <li class='category'><a href='/blog/categories/research/'>research (1)</a></li>

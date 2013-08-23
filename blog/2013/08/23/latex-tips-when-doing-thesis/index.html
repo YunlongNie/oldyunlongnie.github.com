@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Website: make google search your website - YL's Blog</title>
+  <title>Latex Tips when doing Thesis - YL's Blog</title>
   <meta name="author" content="joha">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/19/website-make-google-search-your-website">
+  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -107,7 +107,7 @@
   
   <header class="page-header">
     
-      <h1 class="entry-title">Website: Make Google Search Your Website</h1>
+      <h1 class="entry-title">Latex Tips When Doing Thesis</h1>
     
     
       <p class="meta">
@@ -123,14 +123,94 @@
   
 
 
-<time datetime="2013-07-19T15:18:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+<time datetime="2013-08-23T12:02:00-07:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Let the google search on the navigation bar work. Submitt your url to google on this website <code>https://www.google.com/webmasters/tools/submit-url</code>.</p>
+<div class="entry-content"><p>I just finish my thesis recently and it is time now to summary some the techniques that I feel quite handy.</p>
+
+<h1>Template</h1>
+
+<p>The template can be downloaded from this <a href="" title="http://www.phys.washington.edu/users/mforbes/projects/ubcthesis/">website</a>. In fact, all the need is the following files:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>genthesis.cls
+</span><span class='line'>sample.bib
+</span><span class='line'>ubcthesis.cls
+</span><span class='line'>ubcthesis.dtx
+</span><span class='line'>ubcthesis.ins
+</span><span class='line'>ubcthesis.tex</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Bibliography</h1>
+
+<p>I use the package called <strong>natbib</strong> to control the style of Biblography. <strong>natbib</strong> is a latex packages. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a>.</p>
+
+<h2>Step 1 make a bib file.</h2>
+
+<p>For example, my bib file is called <code>mybib.bib</code>, in which all the citation information is stored. Each term looks like this, which you can download easily from <strong>Google Scholar</strong>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@article{iwai1996boostrap,
+</span><span class='line'>  title={The boostrap theory of money: A search-theoretic foundation of monetary economics},
+</span><span class='line'>  author={Iwai, Katsuhito},
+</span><span class='line'>  journal={Structural Change and Economic Dynamics},
+</span><span class='line'>  volume={7},
+</span><span class='line'>  number={4},
+</span><span class='line'>  pages={451--477},
+</span><span class='line'>  year={1996},
+</span><span class='line'>  publisher={Elsevier}
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h2>Step 2 annouce the package in your latex file.</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\usepackage[authoryear,round]{natbib}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The <code>autheryear,round</code> are certain option. In this case, the reference will be displayed like <code>AutherName(1988)</code>. More optionns are available. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a></p>
+
+<h2>Step 3 cite in the article</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\citet[iwai1996boostrap]</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 4 creat reference section</h2>
+
+<p>Put the folllowing code after last chapter and before the appendix</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>\bibliographystyle{plainnat}
+</span><span class='line'>\bibliography{mybib}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Step 5 complile</h2>
+
+<p>complile the latex file in Latex twice. Then complile it with BibTex twice. Once again, complile it in Latex twice.</p>
+
+<p>Bingo!</p>
 </div>
 
 
@@ -153,12 +233,12 @@
   
 
 
-<time datetime="2013-07-19T15:18:00-07:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+<time datetime="2013-08-23T12:02:00-07:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/website/'>website</a>
+    <a class='category' href='/blog/categories/latex/'>latex</a>
   
 </span>
 
@@ -167,7 +247,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/19/website-make-google-search-your-website/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/19/website-make-google-search-your-website/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -182,14 +262,10 @@
     <ul class="pager">
       
       <li class="previous"><a class="basic-alignment left"
-        href="/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/" title="Previous Post:
-        R: my own function to generate text code for figure">&laquo; R: my own function to generate text code for figure</a></li>
+        href="/blog/2013/08/23/latex-tips-when-doing-thesis/" title="Previous Post:
+        Latex Tips When Doing Thesis">&laquo; Latex Tips When Doing Thesis</a></li>
       
       <li><a href="/blog/archives">Blog Archives</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/blog/2013/07/21/website-link-to-your-own-post/"
-        title="Next Post: Website: Link to your own post">Website: Link to your own post
-        &raquo;</a></li>
       
     </ul>
   </footer>
