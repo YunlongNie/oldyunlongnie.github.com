@@ -3,7 +3,8 @@ layout: post
 title: "Login without password"
 date: 2013-07-17 02:12
 comments: true
-categories: [bash] 
+categories: [linux] 
+tag: bash
 ---
 
 

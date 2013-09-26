@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Theme"
+date: 2013-07-18 14:14
+comments: true
+categories: website 
+tag: octopress
+---
+## Bootstrap Theme
+The theme of this website is [bootstrap](://github.com/bkutil/bootstrap-theme). 
+The code for installation is 
+      
+        $ git clone git://github.com/bkutil/bootstrap-theme.git source/.themes/bootstrap
+        $ rake install['bootstrap']
+        $ rake generate
+
+
+There are other themes on this [website](http://opthemes.com/). Some of them are very cool actually. Check it out!   

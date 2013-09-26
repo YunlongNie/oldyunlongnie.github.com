@@ -3,7 +3,8 @@ layout: post
 title: "github with jeklly boostrap"
 date: 2013-07-17 01:51
 comments: true
-categories: [Blog] 
+categories: [website] 
+tag: octopress 
 ---
 
 

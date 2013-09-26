@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Tag Cloud"
+date: 2013-07-18 19:07
+comments: true
+categories: 
+tag: octopress
+---
+
+see the [tutorial](http://codemacro.com/2012/07/18/add-tag-to-octopress/) here
