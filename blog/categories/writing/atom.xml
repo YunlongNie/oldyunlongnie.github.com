@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Writing | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/blog/categories/writing/atom.xml" rel="self"/>
+  <link href="http://YunlongNie.github.io/"/>
+  <updated>2013-08-25T09:38:52-07:00</updated>
+  <id>http://YunlongNie.github.io/</id>
+  <author>
+    <name><![CDATA[joha]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Writing: Indentificality]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/21/writing-indentificality/"/>
+    <updated>2013-07-21T15:12:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/21/writing-indentificality</id>
+    <content type="html"><![CDATA[<p>Cite:</p>
+
+<blockquote><p>Non-identifiability of parameters is well-recognized problem in classical statistics, and Bayesian statisticians have long recognized the importance of exchangeability assumptions in making statistical inferences. A seemingly unrelated problem in epidemiology is that of confounding: bias in estimation of the effects of an exposure on disease risk, due to inherent differences in risk between exposure and unexposured individuals. Using a simple deterministic model for exposure effect, a logical connection is drawn between the concepts of identifiability, exchangeability, and confounding. This connection allows one to view the problem of confounding as arising from problems of identifiability, and reveals the exchangeability assumptions that are implicit in confounder control methods. It also provides further justification for confounder definition based on comparability of exposure groups, as opposed to collapsibility-based definitions.</p></blockquote>
+
+<h3>* Arising from</h3>
+
+<p>应该是有起源的意思 比如这里 我们说 the problem of confounding as arising from problems of identifiablity Or view A as arising from B.</p>
+
+<blockquote><p>Such an estimator can also be cast as arising from a compromise between the paramatric outcome mdoel and a non-parametric or saturated outcome model.</p></blockquote>
+
+<p>类似于再说A本质上是B，如果我们要说 Non-confounding assumption 也可以看作是 conditional exchangeability:</p>
+
+<blockquote><p>The assumption of Non-confounding can be viewed as arising from the assumption of exchangeability.</p>
+
+<p>The assumption of Non-confounding reveals the exchangeabilty assumptions that are implicit in confounder control methods.</p></blockquote>
+
+<p>另外 可以用 come from 的地方有时候也可以用arising from, like two estimator arising from two competing models.</p>
+
+<h3>reveal</h3>
+
+<blockquote><p>Figure reveals</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>

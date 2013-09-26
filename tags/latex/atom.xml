@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Tag: latex | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/tags/latex/atom.xml" rel="self"/>
+  <link href="http://YunlongNie.github.io/"/>
+  <updated>2013-08-25T09:38:52-07:00</updated>
+  <id>http://YunlongNie.github.io/</id>
+  <author>
+    <name><![CDATA[joha]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Latex Tips when doing Thesis]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis/"/>
+    <updated>2013-08-23T12:02:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/08/23/latex-tips-when-doing-thesis</id>
+    <content type="html"><![CDATA[<p>I just finish my thesis recently and it is time now to summary some the techniques that I feel quite handy.</p>
+
+<h1>Template</h1>
+
+<p>The template can be downloaded from this <a href="" title="http://www.phys.washington.edu/users/mforbes/projects/ubcthesis/">website</a>. In fact, all the need is the following files:
+<code>
+genthesis.cls
+sample.bib
+ubcthesis.cls
+ubcthesis.dtx
+ubcthesis.ins
+ubcthesis.tex
+</code></p>
+
+<h1>Bibliography</h1>
+
+<p>I use the package called <strong>natbib</strong> to control the style of Biblography. <strong>natbib</strong> is a latex packages. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a>.</p>
+
+<h2>Step 1 make a bib file.</h2>
+
+<p>For example, my bib file is called <code>mybib.bib</code>, in which all the citation information is stored. Each term looks like this, which you can download easily from <strong>Google Scholar</strong>.
+<code>
+@article{iwai1996boostrap,
+  title={The boostrap theory of money: A search-theoretic foundation of monetary economics},
+  author={Iwai, Katsuhito},
+  journal={Structural Change and Economic Dynamics},
+  volume={7},
+  number={4},
+  pages={451--477},
+  year={1996},
+  publisher={Elsevier}
+}
+</code></p>
+
+<h2>Step 2 annouce the package in your latex file.</h2>
+
+<p><code>
+\usepackage[authoryear,round]{natbib}
+</code></p>
+
+<p>The <code>autheryear,round</code> are certain option. In this case, the reference will be displayed like <code>AutherName(1988)</code>. More optionns are available. Please refer to this <a href="http://merkel.zoneo.net/Latex/natbib.php">web page</a></p>
+
+<h2>Step 3 cite in the article</h2>
+
+<p><code>
+\citet[iwai1996boostrap]
+</code></p>
+
+<h2>Step 4 creat reference section</h2>
+
+<p>Put the folllowing code after last chapter and before the appendix
+<code>
+\bibliographystyle{plainnat}
+\bibliography{mybib}
+</code></p>
+
+<h2>Step 5 complile</h2>
+
+<p>complile the latex file in Latex twice. Then complile it with BibTex twice. Once again, complile it in Latex twice.</p>
+
+<p>Bingo!</p>
+
+<h1><code>\Input</code> command in latex</h1>
+
+<p>Often, I recommmand to use input when you are writing a long article in latex so that you can put tex code in each chapter into seperate tex files. The main latex file for to generate the whole pdf is just a skeletion of your book or thesis. For me, it is always a pain in the ass to track a long tex files, say including 10,000 lines of code.</p>
+
+<p>you can even use \input in your <code>input</code> files. But \include cannot be used in that way.</p>
+
+<p>\input is super useful when you like to creat figures and tables. It allows reproducible work. See my older <a href="http://yunlongnie.github.io/blog/2013/07/19/r-my-own-function-to-generate-text-code-for-figure/">post</a> about how you generate a tex code for figure.</p>
+]]></content>
+  </entry>
+  
+</feed>

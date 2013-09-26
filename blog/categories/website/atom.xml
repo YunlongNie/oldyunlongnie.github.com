@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: website | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/blog/categories/website/atom.xml" rel="self"/>
+  <link href="http://YunlongNie.github.io/"/>
+  <updated>2013-08-25T09:38:52-07:00</updated>
+  <id>http://YunlongNie.github.io/</id>
+  <author>
+    <name><![CDATA[joha]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[how to link files in this blog]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/31/how-to-link-files-in-this-blog/"/>
+    <updated>2013-07-31T14:52:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/31/how-to-link-files-in-this-blog</id>
+    <content type="html"><![CDATA[<p>In the previous blog, I link the key word slide with a file link. Below is the way one realize it.</p>
+
+<p>*Creat a folder in under the <code>source' folder, say here I created a folder caller</code>files'.</p>
+
+<p>*Put the file in this folder</p>
+
+<p>*when you link you can do:
+<code>
+[slide](http://yunlongnie.github.io/files/Slide_V3.pdf)
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Website: Link to your own post]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/21/website-link-to-your-own-post/"/>
+    <updated>2013-07-21T00:21:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/21/website-link-to-your-own-post</id>
+    <content type="html"><![CDATA[<p>Sometimes, we need to link to our own post. You can, of course, link with <code>http://</code> but I&rsquo;d rather use a shorter one.</p>
+
+<p>```
+my previous <a href="/blog/2013/07/18/sidebar/">post</a></p>
+
+<p><code>``
+Note that the default root directory is</code>/<code>, so you need to add  before</code>/blog`</p>
+
+<p>my previous <a href="/blog/2013/07/18/sidebar/">post</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Website: make google search your website]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/website-make-google-search-your-website/"/>
+    <updated>2013-07-19T15:18:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/website-make-google-search-your-website</id>
+    <content type="html"><![CDATA[<p>Let the google search on the navigation bar work. Submitt your url to google on this website <code>https://www.google.com/webmasters/tools/submit-url</code>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Redirect personal website to here]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here/"/>
+    <updated>2013-07-19T02:30:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/redirect-personal-website-to-here</id>
+    <content type="html"><![CDATA[<h3>my old personal website is <code>stat.ubc.ca/~yunlong.nie</code> and when visitors come to this web page, I&rsquo;d like to guide them to this new blog automatically.</h3>
+
+<p>Here we need to make use <code>.haccess</code> file.</p>
+
+<pre><code>      $ cd public_html/
+      $ vi .haccess
+      # put the following code into this file
+      Redirect 301 /~yunlong.nie/ http://yunlongnie.github.io/
+</code></pre>
+
+<p>Bingo! This <a href="http://www.uvm.edu/webguide/?Page=redirects.html&amp;SM=urlsubmenu.html">website</a> has more details.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Theme]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/18/theme/"/>
+    <updated>2013-07-18T14:14:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/18/theme</id>
+    <content type="html"><![CDATA[<h2>Bootstrap Theme</h2>
+
+<p>The theme of this website is <a href="://github.com/bkutil/bootstrap-theme">bootstrap</a>.
+The code for installation is</p>
+
+<pre><code>    $ git clone git://github.com/bkutil/bootstrap-theme.git source/.themes/bootstrap
+    $ rake install['bootstrap']
+    $ rake generate
+</code></pre>
+
+<p>There are other themes on this <a href="http://opthemes.com/">website</a>. Some of them are very cool actually. Check it out!</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: linux | YL's Blog]]></title>
+  <link href="http://YunlongNie.github.io/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://YunlongNie.github.io/"/>
+  <updated>2013-08-25T09:38:52-07:00</updated>
+  <id>http://YunlongNie.github.io/</id>
+  <author>
+    <name><![CDATA[joha]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Run Bash Code and documentation manage]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/run-bash-code-and-documentation-manage/"/>
+    <updated>2013-07-19T12:00:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/run-bash-code-and-documentation-manage</id>
+    <content type="html"><![CDATA[<p>I tried to manage my chrome download folder. Say, put all the mp3 files into one folder and all the pdf to another folder. We can simply write a   <strong>bash</strong> code script and make use of the <code>source</code> command.</p>
+
+<p>My script is like this:</p>
+
+<pre><code>      find ~/Downloads -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+      find ~/Downloads -iname "*.torrent" -exec rm {} \;
+      find ~/Downloads -iname "*.pdf" -exec mv {} ~/Downloads/PDFs/ \;
+</code></pre>
+
+<p>save the above script in a txt file named <code>johadload.txt</code> and you can simply run</p>
+
+<pre><code>     source johadload.txt
+</code></pre>
+
+<p>bingo!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Find by file extension and do sth]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth/"/>
+    <updated>2013-07-19T00:03:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/19/find-by-file-extension-and-do-sth</id>
+    <content type="html"><![CDATA[<h3>say we wanna find all the file with the same extension within one folder and do sth else</h3>
+
+<pre><code>     cd ~/Downloads;
+     find . -iname "*.mp3" -exec mv {}  ~/Dropbox/OwnCloud/mp3/ \;
+     # first locate all the files with .mp3 then mv to a new folder
+
+     find . -iname "*.mp3" -exec rm {}  \;
+     # first locate all the files with .mp3 then delete them all
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Login without password]]></title>
+    <link href="http://YunlongNie.github.io/blog/2013/07/17/login-without-password/"/>
+    <updated>2013-07-17T02:12:00-07:00</updated>
+    <id>http://YunlongNie.github.io/blog/2013/07/17/login-without-password</id>
+    <content type="html"><![CDATA[<p>say you wanna log into a linux server to do some job. But every time it requires you enter the password, which at least I feel annoying. Here is a way you can generate a key and login without password.</p>
+
+<p>Suppose we call the local machine A and server as B. Of course, you should have a account for B, say joha@B and password: thissiapassword.</p>
+
+<h1>How?</h1>
+
+<ol>
+<li><p>first suppose you are on A already and you need to generate a pair of authentication keys. Do not enter any passphrase.
+<code>ssh-keygen -t rsa</code></p></li>
+<li><p>Defaultly, it will creat a key in ~/.ssh/.</p></li>
+<li><p>use ssh to creat a folder ~/.ssh as use joha on B. if the folder already exits, it&rsquo;s ok.
+<code>ssh joha@B mkdir -p .ssh</code>
+enter the password for B.</p></li>
+<li><p>append A&rsquo;s new public key to joha@B:.ssh/authorized_keys and enter the password for b again.
+<code>cat .ssh/id_rsa.pub | ssh joha@B 'cat &gt;&gt; .ssh/authorized keys</code></p></li>
+<li><p>then you can login B without password
+<code>ssh joha@B</code></p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

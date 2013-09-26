@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>R: let R run bash code in backgroud - YL's Blog</title>
+  <meta name="author" content="joha">
+
+  
+  <meta name="description" content="">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://YunlongNie.github.io/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/javascripts/libs/jquery.js"></script>
+  <script src="/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/bootstrap.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="YL's Blog" type="application/atom+xml">
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-42618242-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <a class="brand" href="/">YL's Blog</a>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss">
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:YunlongNie.github.io" />
+              <input class="search-query" type="text" name="q" results="0" placeholder="Search"/>
+            </fieldset>
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+    <div class="row-fluid">
+      
+<article class="hentry span9" role="article">
+
+  
+  <header class="page-header">
+    
+      <h1 class="entry-title">R: Let R Run Bash Code in Backgroud</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-21T00:35:00-07:00" pubdate data-updated="true">Jul 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Recently, I am making a R package. During this process, I found lots of useful stuff which worth a record. I will talk about how to make R packges with Rcpp, in which R code and C code are combined.</p>
+
+<p>Below is my R code for making a pacakge:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>require(Rcpp)
+</span><span class='line'>
+</span><span class='line'>cfiles = paste("Cpp/",list.files("Cpp/"),sep="")
+</span><span class='line'>Rfiles = paste("R/",list.files("R/"),sep="")
+</span><span class='line'>packageName="BayDR"
+</span><span class='line'>verNo=2.2
+</span><span class='line'>system(paste("rm -rf",packageName))
+</span><span class='line'>#  delete the original bayDR folder 
+</span><span class='line'>Rcpp.package.skeleton(name=packageName,cpp_files=cfiles,code_files=Rfiles,author="YL",
+</span><span class='line'>                      example_code=FALSE,email="yunlong.nie@stat.ubc.ca")
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>require(roxygen2)
+</span><span class='line'>
+</span><span class='line'>roxygenise(package.dir="BayDR",overwrite=TRUE) # wirte some in the C++ files too, like in the DatDen_X_C
+</span><span class='line'>
+</span><span class='line'># add useDynLib(BayDR) at the end of NAMESPACE
+</span><span class='line'>
+</span><span class='line'>system(paste("cp -r data ",paste0(packageName,"/")))
+</span><span class='line'>sink(file=paste0(packageName,"/NAMESPACE"),append=TRUE)
+</span><span class='line'>cat("useDynLib(",packageName,")",sep="")
+</span><span class='line'>sink()
+</span><span class='line'>file.copy(from="DESCRIPTION",to=paste0(packageName,"/"),overwrite=TRUE)
+</span><span class='line'>desp= readLines(con=paste0(packageName,"/","DESCRIPTION"))
+</span><span class='line'>desp[4] = paste("Version: ", verNo)
+</span><span class='line'>writeLines(desp,con=paste0(packageName,"/","DESCRIPTION"))
+</span><span class='line'># then copy the description file and data folder, change the verion number in the description file. 
+</span><span class='line'>
+</span><span class='line'># command line to the the folder which bayDR locates
+</span><span class='line'>
+</span><span class='line'>system(paste("R CMD build",packageName))
+</span><span class='line'>filenames = list.files("~/Dropbox/UBC/CinR/FileOnSever/Mypackages/Import/")
+</span><span class='line'>system(paste("R CMD check",filenames[grep(as.character(verNo),filenames)]))
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sorry for throwing this ugly code first here. But if you look carefully, probably you did notice that there is a <code>system()</code> function there. For example,</p>
+
+<pre><code>    system(paste("cp -r data ",paste0(packageName,"/")))
+</code></pre>
+
+<p>which I call bash to copy the data file into another directory. It&rsquo;s actually super simple but spares you open your terminal or click your mouse. The problem is sometimes after a long time when you cannot exactly recall every step, but you need to reproduce your work. Running everything on a script avoid that issue. It is especially helpful for file management.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">joha</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-21T00:35:00-07:00" pubdate data-updated="true">Jul 21<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/r/'>r</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://YunlongNie.github.io/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/" data-via="ggplot2" data-counturl="http://YunlongNie.github.io/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    
+    <ul class="pager">
+      
+      <li class="previous"><a class="basic-alignment left"
+        href="/blog/2013/07/21/website-link-to-your-own-post/" title="Previous Post:
+        Website: Link to your own post">&laquo; Website: Link to your own post</a></li>
+      
+      <li><a href="/blog/archives">Blog Archives</a></li>
+      
+      <li class="next"><a class="basic-alignment right" href="/blog/2013/07/21/writing-indentificality/"
+        title="Next Post: Writing: Indentificality">Writing: Indentificality
+        &raquo;</a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+<aside class="sidebar-nav span3">
+  
+    <section>
+  <h1>About Me</h1>
+  <td style="vertical-align: top;"><img
+ style="width: 160px; height: 148px;" src="http://ww2.sinaimg.cn/mw690/a1aeb89djw1e6g2uskgczj206y06yt94.jpg">
+      </td>
+      <td style="vertical-align: top;">
+  <p>Graduate Student in UBC, yunlong.nie at stat ubc ca</p>
+</section>
+
+<section class="well">
+  <ul id="gh_repos" class="nav">
+    <li class="nav-header">GitHub Repos</li>
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/YunlongNie">@YunlongNie</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        github.showRepos({
+            user: 'YunlongNie',
+            count: 1,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/asides/github.js" type="text/javascript"> </script>
+</section>
+
+<section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">Recent Posts</li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/23/latex-tips-when-doing-thesis/">Latex Tips when doing Thesis</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/31/how-to-link-files-in-this-blog/">how to link files in this blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/31/master-defense/">Master Defense</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/21/writing-indentificality/">Writing: Indentificality</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/21/r-let-r-run-bash-code-in-backgroud/">R: let R run bash code in backgroud</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Weibo</h1>
+  <ul id="weibo">
+    <li>
+      <iframe 
+        width="100%" 
+        height="550" 
+        class="share_self" 
+        frameborder="0" 
+        scrolling="no" 
+        src="http://widget.weibo.com/weiboshow/index.php?width=0&height=550&ptype=1&speed=0&skin=&isTitle=0&noborder=1&isWeibo=1&isFans=&uid=2712582301&verifier=8685027d">
+      </iframe>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h1>Tags</h1>
+  <ul class="tag-cloud">
+    <a style="font-size: 90%" href="/tags/stats/">Stats</a>
+<a style="font-size: 90%" href="/tags/writing/">Writing</a>
+<a style="font-size: 193%" href="/tags/bash/">bash</a>
+<a style="font-size: 90%" href="/tags/github/">github</a>
+<a style="font-size: 142%" href="/tags/html/">html</a>
+<a style="font-size: 90%" href="/tags/latex/">latex</a>
+<a style="font-size: 210%" href="/tags/octopress/">octopress</a>
+<a style="font-size: 90%" href="/tags/r/">r</a>
+<a style="font-size: 90%" href="/tags/r-and-latex/">r&latex</a>
+<a style="font-size: 90%" href="/tags/thesis/">thesis</a>
+
+  </ul>
+</section>
+<section>
+  <h1>Categories</h1>
+  <ul id="categories">
+    <li class='category'><a href='/blog/categories/github/'>Github (1)</a></li>
+<li class='category'><a href='/blog/categories/writing/'>Writing (1)</a></li>
+<li class='category'><a href='/blog/categories/latex/'>latex (2)</a></li>
+<li class='category'><a href='/blog/categories/linux/'>linux (3)</a></li>
+<li class='category'><a href='/blog/categories/r/'>r (2)</a></li>
+<li class='category'><a href='/blog/categories/research/'>research (1)</a></li>
+<li class='category'><a href='/blog/categories/website/'>website (8)</a></li>
+
+  </ul>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  Copyright &copy; 2013 - joha -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
